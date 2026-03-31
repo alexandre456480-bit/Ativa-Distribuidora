@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fale Conosco | Ativa Distribuidora de Hortifruti em Goiânia</title>
+    <meta name="description" content="Fale com a Ativa Distribuidora no CEASA-GO. Abasteça seu negócio com frutas e verduras selecionadas e entrega rápida.">
+    <link rel="icon" type="image/jpeg" href="logo2.webp">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <canvas id="particles-canvas" class="particles-canvas"></canvas>
+
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo" id="nav-logo">
+                <img src="logo.webp" alt="Ativa Distribuidora Logo" class="logo-img">
+                <span class="logo-text">ATIVA</span>
+            </a>
+            <nav class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link nav-anim" style="animation-delay: 0.1s">Home</a>
+                <a href="quemsomos.html" class="nav-link nav-anim" style="animation-delay: 0.2s">Quem Somos</a>
+                <a href="produtos.html" class="nav-link nav-anim" style="animation-delay: 0.3s">Nossos Produtos</a>
+                <a href="contato.html" class="nav-link nav-cta nav-anim" style="animation-delay: 0.4s">Fale Conosco</a>
+            </nav>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <div class="contact-hero reveal-el">
+        <div class="container">
+            <span class="section-tag">Contato Rápido</span>
+            <h1 class="hero-title" style="color: var(--green-900); font-size: 3.5rem;">Fale Conosco</h1>
+            <p class="section-sub centered">Pronto para abastecer seu negócio com o melhor hortifruti do atacado?</p>
+
+            <a href="https://wa.me/5562999789984" target="_blank" class="huge-whatsapp">
+                <i data-lucide="message-circle"></i>
+                <h3>WhatsApp Ativa</h3>
+                <span>(62) 99978-9984</span>
+            </a>
+        </div>
+    </div>
+
+    <section class="section" style="padding-top: 0;">
+        <div class="container">
+            <div class="diff-grid" style="max-width: 900px; margin: 0 auto;">
+                <div class="diff-card reveal-el" style="text-align: center; padding: 3rem 1rem;">
+                    <div class="diff-icon-wrap" style="margin: 0 auto 1.5rem; justify-content: center;">
+                        <i data-lucide="map-pin"></i>
+                    </div>
+                    <h3 style="color: var(--green-900);">Localização</h3>
+                    <p style="margin-top: 0.5rem; color: var(--text-muted); font-weight: 500;">CEASA-GO BR-153<br>CEP: 74675-090 | Goiânia - GO</p>
+                </div>
+                <div class="diff-card reveal-el" style="text-align: center; padding: 3rem 1rem;">
+                    <div class="diff-icon-wrap" style="margin: 0 auto 1.5rem; justify-content: center;">
+                        <i data-lucide="mail"></i>
+                    </div>
+                    <h3 style="color: var(--green-900);">E-mail</h3>
+                    <p style="margin-top: 0.5rem; color: var(--text-muted); font-weight: 500;">contato@ativadistribuidora.com.br</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-brand">
+                    <img src="logo.webp" alt="Logo Ativa" class="footer-logo-img">
+                    <div>
+                        <span class="footer-logo">ATIVA</span>
+                        <p class="footer-tagline">Distribuidora de Frutas e Verduras</p>
+                    </div>
+                </div>
+                <div class="footer-copy">
+                    <p>&copy; 2026 Ativa Distribuidora LTDA. Todos os direitos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/5562999789984" target="_blank" class="whatsapp-3d-btn" aria-label="WhatsApp">
+        <div class="whatsapp-3d-inner"><i data-lucide="message-circle"></i></div>
+    </a>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

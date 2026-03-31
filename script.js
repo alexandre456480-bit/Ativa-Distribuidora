@@ -44,8 +44,17 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
 // As imagens fluem conforme o usuario da scroll (como uma landing page premium)
 // ==========================================================================
 const heroCanvas = document.getElementById('hero-canvas');
-const heroCtx = heroCanvas.getContext('2d');
+const heroCtx = heroCanvas ? heroCanvas.getContext('2d') : null;
 const heroSection = document.getElementById('hero');
+
+const isMobile = window.innerWidth <= 768 || /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
+if (heroSection && isMobile) {
+    if (heroCanvas) heroCanvas.style.display = 'none';
+    heroSection.style.backgroundImage = 'linear-gradient(rgba(27,63,43,0.8), rgba(27,63,43,0.6)), url("https://images.unsplash.com/photo-1542838132-92c53300491e?w=800&q=80")';
+    heroSection.style.backgroundSize = 'cover';
+    heroSection.style.backgroundPosition = 'center';
+}
 
 const FRAME_COUNT = 30;
 const framePath = (i) => `imagens/ezgif-frame-${String(i + 1).padStart(3, '0')}.jpg`;
@@ -74,6 +83,7 @@ for (let i = 0; i < FRAME_COUNT; i++) {
 }
 
 function resizeHeroCanvas() {
+    if (!heroCanvas || !heroCtx || isMobile || !heroSection) return;
     const dpr = Math.min(window.devicePixelRatio || 1, 2); // limitar dpr para performance
     const rect = heroSection.getBoundingClientRect();
     heroCanvas.width = rect.width * dpr;
@@ -84,6 +94,7 @@ function resizeHeroCanvas() {
 }
 
 function drawHeroFrame() {
+    if (!heroCanvas || !heroCtx || isMobile || !heroSection) return;
     const w = heroSection.offsetWidth;
     const h = heroSection.offsetHeight;
 
@@ -131,40 +142,34 @@ window.addEventListener('resize', () => {
 gsap.registerPlugin(ScrollTrigger);
 
 // -- SCROLL-DRIVEN: imagens fluem conforme scroll (dentro da hero e um pouco após) --
-gsap.to(heroAnimFrame, {
-    index: FRAME_COUNT - 1,
-    snap: 'index',
-    ease: 'none',
-    scrollTrigger: {
-        trigger: heroSection,
-        start: 'top top',
-        end: 'bottom top',
-        scrub: 0.5, // atraso suave para fluidez
-        // pin: false — nao fixa a hero
-    },
-    onUpdate: drawHeroFrame
-});
+if (heroCanvas && heroSection && !isMobile) {
+    // Também roda um loop automático quando o user está no topo sem scroll (pra hero nao ficar estática)
+    let autoplayTween = gsap.to(heroAnimFrame, {
+        index: FRAME_COUNT - 1,
+        snap: 'index',
+        ease: 'none',
+        duration: 3,
+        repeat: -1,
+        yoyo: true,
+        onUpdate: drawHeroFrame,
+        paused: false
+    });
 
-// Também roda um loop automático quando o user está no topo sem scroll (pra hero nao ficar estática)
-let autoplayTween = gsap.to(heroAnimFrame, {
-    index: FRAME_COUNT - 1,
-    snap: 'index',
-    ease: 'none',
-    duration: 3,
-    repeat: -1,
-    yoyo: true,
-    onUpdate: drawHeroFrame,
-    paused: false
-});
-
-// Quando o user começa a scrollar, pausa o autoplay e ativa o scroll-driven
-ScrollTrigger.create({
-    trigger: heroSection,
-    start: 'top top',
-    end: 'bottom top',
-    onEnter: () => autoplayTween.pause(),
-    onLeaveBack: () => autoplayTween.play(),
-});
+    gsap.to(heroAnimFrame, {
+        index: FRAME_COUNT - 1,
+        snap: 'index',
+        ease: 'none',
+        scrollTrigger: {
+            trigger: heroSection,
+            start: 'top top',
+            end: 'bottom top',
+            scrub: 0.5, // atraso suave para fluidez
+            onEnter: () => autoplayTween.pause(),
+            onLeaveBack: () => autoplayTween.play(),
+        },
+        onUpdate: drawHeroFrame
+    });
+}
 
 // -- Hero entrance animation --
 const heroTl = gsap.timeline({ defaults: { ease: 'power3.out' } });

@@ -135,21 +135,19 @@ button {
     left: 0;
     right: 0;
     z-index: 1000;
-    padding: 1.25rem 0;
+    padding: 1rem 0; /* Padding fixo e menor para manter a altura */
     transition: all 0.4s ease;
+    height: 80px; /* Altura fixa garantida */
 }
 
 .navbar.scrolled {
-    padding: 0.75rem 0;
-    background: rgba(255, 255, 255, 0.85);
+    padding: 0.5rem 0;
+    background: rgba(221, 219, 212, 0.85);
     backdrop-filter: blur(24px);
     -webkit-backdrop-filter: blur(24px);
     border-bottom: 1px solid var(--glass-border);
     box-shadow: 0 4px 30px var(--glass-shadow);
-}
-
-.navbar.scrolled .logo-text {
-    color: var(--green-900);
+    height: 70px; /* Fica um pouco menor no scroll, mas a logo continuará solta */
 }
 
 .navbar.scrolled .nav-link {
@@ -169,21 +167,24 @@ button {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative; /* Necessário para o absolute da logo */
+    height: 100%;
 }
 
 .nav-logo {
     display: flex;
     align-items: center;
-    gap: 0.75rem;
+    height: 100%;
 }
 
 .logo-img {
-    width: 42px;
-    height: 42px;
-    border-radius: var(--r-sm);
-    object-fit: cover;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+    height: 250px; /* Aumentado significativamente */
+    width: auto;
+    object-fit: contain;
     transition: var(--t-fast);
+    position: absolute;
+    top: -85px; /* Faz com que a logo "pule" para fora da navbar */
+    left: 0;
 }
 
 .logo-img:hover {

@@ -135,9 +135,11 @@ button {
     left: 0;
     right: 0;
     z-index: 1000;
-    padding: 1rem 0; /* Padding fixo e menor para manter a altura */
+    padding: 0.5rem 0;
     transition: all 0.4s ease;
-    height: 80px; /* Altura fixa garantida */
+    height: 80px;
+    display: flex;
+    align-items: center;
 }
 
 .navbar.scrolled {
@@ -178,13 +180,21 @@ button {
 }
 
 .logo-img {
-    height: 250px; /* Aumentado significativamente */
+    height: 140px;
     width: auto;
     object-fit: contain;
     transition: var(--t-fast);
     position: absolute;
-    top: -85px; /* Faz com que a logo "pule" para fora da navbar */
+    top: -20px;
     left: 0;
+    z-index: 1001; /* Garante que fique acima da navbar */
+}
+
+@media (max-width: 768px) {
+    .logo-img {
+        height: 100px;
+        top: -10px;
+    }
 }
 
 .logo-img:hover {
@@ -1178,20 +1188,25 @@ button {
 }
 
 @media (max-width: 768px) {
+    .navbar {
+        height: 70px;
+    }
+    
     .nav-menu {
         display: none;
         position: fixed;
         top: 0;
         left: 0;
         right: 0;
-        bottom: 0;
-        background: rgba(27, 63, 43, 0.97);
+        height: 100vh;
+        background: rgba(27, 63, 43, 0.98);
         backdrop-filter: blur(20px);
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: 2rem;
-        z-index: 999;
+        gap: 2.5rem;
+        z-index: 2000;
+        padding-top: 50px;
     }
 
     .nav-menu.open {
@@ -1205,6 +1220,8 @@ button {
 
     .nav-toggle {
         display: flex;
+        z-index: 2001;
+        position: relative;
     }
 
     .hero-title {

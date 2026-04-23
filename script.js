@@ -25,10 +25,8 @@ function initCustomCursor() {
     function animate() {
         dx += (mx - dx) * 0.15;
         dy += (my - dy) * 0.15;
-        dot.style.left = mx + 'px';
-        dot.style.top = my + 'px';
-        ring.style.left = dx + 'px';
-        ring.style.top = dy + 'px';
+        dot.style.transform = `translate3d(calc(${mx}px - 50%), calc(${my}px - 50%), 0)`;
+        ring.style.transform = `translate3d(calc(${dx}px - 50%), calc(${dy}px - 50%), 0)`;
         requestAnimationFrame(animate);
     }
     animate();
@@ -47,7 +45,7 @@ function initNavbar() {
 
     window.addEventListener('scroll', () => {
         navbar.classList.toggle('scrolled', window.scrollY > 50);
-    });
+    }, { passive: true });
 
     if (toggle) {
         toggle.addEventListener('click', () => {

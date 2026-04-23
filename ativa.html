@@ -28,9 +28,13 @@
     <link rel="preload" href="logo_hortifruti.webp" as="image">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap">
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
+        rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap">
+    </noscript>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="pages.css">
     <script src="https://unpkg.com/lucide@latest" defer></script>
@@ -59,7 +63,7 @@
     <!-- Navbar -->
     <nav class="navbar scrolled" id="navbar">
         <div class="nav-container">
-            <a href="index.html" class="nav-logo"><img src="ativa.webp" alt="ATIVA Distribuidora Logo"></a>
+            <a href="index.html" class="nav-logo"><img src="ativa.webp" alt="ATIVA Distribuidora Logo" width="180" height="60" fetchpriority="high"></a>
             <ul class="nav-links" id="navLinks">
                 <li><a href="index.html" class="nav-link">Início</a></li>
                 <li><a href="ativa.html" class="nav-link active">Quem Somos</a></li>
@@ -97,9 +101,9 @@
                 <div class="story-block reveal-left">
                     <div class="story-image-stack">
                         <img src="ativa-imagens/quickwebp-converted/WhatsApp Image 2026-04-13 at 11.10.47.webp"
-                            alt="ATIVA história" loading="lazy" class="story-img-main">
+                            alt="ATIVA história" loading="lazy" class="story-img-main" width="400" height="300">
                         <img src="ativa-imagens/quickwebp-converted/WhatsApp Image 2026-04-13 at 10.32.42.webp"
-                            alt="ATIVA equipe" loading="lazy" class="story-img-float">
+                            alt="ATIVA equipe" loading="lazy" class="story-img-float" width="300" height="300">
                     </div>
                 </div>
                 <div class="story-block reveal-right">
@@ -142,22 +146,22 @@
                 <div class="gallery-masonry">
                     <div class="gallery-item gallery-tall">
                         <img src="ativa-imagens/WhatsApp Image 2026-03-31 at 09.24.52.webp" alt="Estrutura ATIVA"
-                            loading="lazy">
+                            loading="lazy" width="300" height="600">
                         <div class="gallery-overlay"><span>Nosso Espaço</span></div>
                     </div>
                     <div class="gallery-item">
                         <img src="ativa-imagens/WhatsApp Image 2026-03-31 at 09.26.17.webp" alt="Produtos ATIVA"
-                            loading="lazy">
+                            loading="lazy" width="300" height="300">
                         <div class="gallery-overlay"><span>Produtos Frescos</span></div>
                     </div>
                     <div class="gallery-item">
                         <img src="ativa-imagens/WhatsApp Image 2026-03-31 at 09.26.53.webp" alt="Equipe ATIVA"
-                            loading="lazy">
+                            loading="lazy" width="300" height="300">
                         <div class="gallery-overlay"><span>Equipe Dedicada</span></div>
                     </div>
                     <div class="gallery-item gallery-wide">
                         <img src="ativa-imagens/quickwebp-converted/WhatsApp Image 2026-04-13 at 10.32.42.webp"
-                            alt="Operação ATIVA" loading="lazy">
+                            alt="Operação ATIVA" loading="lazy" width="600" height="300">
                         <div class="gallery-overlay"><span>Operação Diária</span></div>
                     </div>
                 </div>
@@ -198,7 +202,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-brand">
-                    <img src="logo_hortifruti.webp" alt="ATIVA Distribuidora" class="footer-logo">
+                    <img src="logo_hortifruti.webp" alt="ATIVA Distribuidora" class="footer-logo" width="180" height="60" loading="lazy">
                     <p>Distribuindo qualidade e frescor desde 2001. Sua confiança é o nosso maior produto.</p>
                 </div>
                 <div class="footer-links">

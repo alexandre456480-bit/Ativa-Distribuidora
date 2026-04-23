@@ -28,9 +28,13 @@
     <link rel="preload" href="logo_hortifruti.webp" as="image">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap">
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
+        rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap">
+    </noscript>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="pages.css">
     <script src="https://unpkg.com/lucide@latest" defer></script>
@@ -62,7 +66,7 @@
 
     <nav class="navbar scrolled" id="navbar">
         <div class="nav-container">
-            <a href="index.html" class="nav-logo"><img src="ativa.webp" alt="ATIVA Distribuidora Logo"></a>
+            <a href="index.html" class="nav-logo"><img src="ativa.webp" alt="ATIVA Distribuidora Logo" width="180" height="60" fetchpriority="high"></a>
             <ul class="nav-links" id="navLinks">
                 <li><a href="index.html" class="nav-link">Início</a></li>
                 <li><a href="ativa.html" class="nav-link">Quem Somos</a></li>
@@ -99,7 +103,7 @@
                     <div class="work-step-content glass-card">
                         <div class="work-step-img">
                             <img src="ativa-imagens/quickwebp-converted/WhatsApp Image 2026-04-08 at 13.41.11.webp"
-                                alt="Seleção CEASA" loading="lazy">
+                                alt="Seleção CEASA" loading="lazy" width="400" height="300">
                         </div>
                         <div class="work-step-text">
                             <h3><i data-lucide="search" class="icon-3d"></i> Seleção no CEASA</h3>
@@ -116,7 +120,7 @@
                     <div class="work-step-content glass-card">
                         <div class="work-step-img">
                             <img src="ativa-imagens/quickwebp-converted/WhatsApp Image 2026-04-13 at 10.32.42.webp"
-                                alt="Separação" loading="lazy">
+                                alt="Separação" loading="lazy" width="400" height="300">
                         </div>
                         <div class="work-step-text">
                             <h3><i data-lucide="list-checks" class="icon-3d"></i> Separação dos Pedidos</h3>
@@ -132,7 +136,7 @@
                     <div class="work-step-content glass-card">
                         <div class="work-step-img">
                             <img src="ativa-imagens/quickwebp-converted/WhatsApp Image 2026-04-13 at 11.10.47.webp"
-                                alt="Entrega" loading="lazy">
+                                alt="Entrega" loading="lazy" width="400" height="300">
                         </div>
                         <div class="work-step-text">
                             <h3><i data-lucide="truck" class="icon-3d"></i> Entrega Pontual</h3>
@@ -192,7 +196,7 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-brand"><img src="logo_hortifruti.webp" alt="ATIVA" class="footer-logo">
+                <div class="footer-brand"><img src="logo_hortifruti.webp" alt="ATIVA" class="footer-logo" width="180" height="60" loading="lazy">
                     <p>Distribuindo qualidade e frescor desde 2001.</p>
                 </div>
                 <div class="footer-links">

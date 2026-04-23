@@ -20,18 +20,24 @@
     <meta name="author" content="ATIVA Distribuidora">
     
     <!-- Preload / Performance -->
-    <link rel="icon" type="image/webp" href="logo_hortifruti.webp">
-    <link rel="preload" href="logo_hortifruti.webp" as="image">
+    <link rel="icon" type="image/webp" href="assets/img/logo_hortifruti.webp">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Inter:wght@400;500;600&family=Outfit:wght@500;600&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Inter:wght@400;500;600&family=Outfit:wght@500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
     <noscript>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Inter:wght@400;500;600&family=Outfit:wght@500;600&display=swap">
     </noscript>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="pages.css">
-    <script src="https://unpkg.com/lucide@latest" defer></script>
+
+    <!-- Critical CSS Inline -->
+    <style>:root{--cafe-noir:#4C3D19;--kombu:#354024;--moss:#889063;--tan:#CFBB99;--bone:#E5D7C4;--white:#FAFAF7;--black:#1a1a14;--kombu-light:#44532f;--moss-light:#a0a87a;--radius-sm:8px;--radius-md:16px;--radius-lg:24px;--transition:.4s cubic-bezier(.22,1,.36,1)}*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth;overflow-x:clip}body{font-family:'Inter','Outfit',sans-serif;color:var(--cafe-noir);background:var(--bone);overflow-x:hidden;line-height:1.6}a{text-decoration:none;color:inherit}img{max-width:100%;display:block}ul{list-style:none}.container{max-width:1280px;margin:0 auto;padding:0 24px}.scroll-progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--moss),var(--tan),var(--moss-light));z-index:10001;width:0%}.navbar{position:fixed;top:0;left:0;right:0;z-index:10000;height:80px;display:flex;align-items:center;transition:all .4s ease}.navbar.scrolled{background:rgba(53,64,36,.92);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);height:70px;box-shadow:0 4px 30px rgba(0,0,0,.15)}.nav-container{max-width:1280px;width:100%;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between}.nav-logo{position:relative;height:80px;min-width:200px;display:flex;align-items:center}.nav-logo img{position:absolute;top:50%;left:0;transform:translateY(-45%);height:200px;width:auto;filter:drop-shadow(0 4px 12px rgba(0,0,0,.3));z-index:100}.nav-links{display:flex;align-items:center;gap:8px}.nav-link{color:var(--bone);font-weight:500;font-size:.95rem;padding:8px 18px;border-radius:var(--radius-sm)}.nav-cta{background:linear-gradient(135deg,var(--moss),var(--moss-light))!important;color:var(--white)!important;border-radius:var(--radius-md)!important;padding:10px 24px!important}.nav-toggle{display:none}.page-hero{position:relative;min-height:50vh;display:flex;align-items:center;justify-content:center;overflow:hidden;padding-top:80px}.page-hero-bg{position:absolute;inset:0;background:linear-gradient(180deg,var(--kombu) 0%,var(--kombu-light) 50%,var(--moss) 100%);z-index:-1}.page-hero-content{text-align:center;z-index:2;padding:60px 0 80px}.page-hero-title{font-family:'Playfair Display',serif;font-size:clamp(2.5rem,5vw,4rem);font-weight:800;color:var(--bone);margin-bottom:16px;line-height:1.1}.page-hero-subtitle{color:rgba(229,215,196,.7);font-size:1.1rem;max-width:500px;margin:0 auto}.shape-divider{position:absolute;bottom:0;left:0;width:100%;line-height:0;z-index:3}.shape-divider svg{width:100%;height:auto;display:block}.hero-divider{bottom:-1px}@media(max-width:768px){body{cursor:auto}.nav-toggle{display:flex;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:8px;z-index:10001}.nav-toggle span{width:28px;height:2px;background:var(--bone);border-radius:2px}.nav-logo img{height:60px;position:relative;top:auto;left:auto;transform:none;max-width:60vw;object-fit:contain}.nav-links{position:fixed;top:0;right:-100%;width:280px;height:100vh;background:rgba(53,64,36,.97);backdrop-filter:blur(20px);flex-direction:column;justify-content:center;gap:16px;padding:40px;transition:right .4s ease}.nav-links.active{right:0}}</style>
+
+    <!-- CSS não-crítico (deferred) -->
+    <link rel="stylesheet" href="assets/css/styles.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="assets/css/styles.css"></noscript>
+    <link rel="stylesheet" href="assets/css/pages.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="assets/css/pages.css"></noscript>
+    <script src="https://unpkg.com/lucide@0.344.0" defer></script>
     
     <!-- Dados Estruturados / JSON-LD -->
     <script type="application/ld+json">
@@ -57,7 +63,7 @@
 
     <nav class="navbar scrolled" id="navbar">
         <div class="nav-container">
-            <a href="index.html" class="nav-logo"><img src="ativa.webp" alt="ATIVA Distribuidora Logo" width="180" height="60" fetchpriority="high"></a>
+            <a href="index.html" class="nav-logo"><img src="assets/img/ativa.webp" alt="ATIVA Distribuidora Logo" width="180" height="60" fetchpriority="high"></a>
             <ul class="nav-links" id="navLinks">
                 <li><a href="index.html" class="nav-link">Início</a></li>
                 <li><a href="ativa.html" class="nav-link">Quem Somos</a></li>
@@ -91,7 +97,7 @@
             <div class="products-categories">
                 <div class="product-feature reveal-left" style="--delay:0.1s">
                     <div class="product-feature-img">
-                        <img src="ativa-imagens/WhatsApp Image 2026-03-31 at 09.30.06.webp" alt="Frutas" loading="lazy" width="400" height="300">
+                        <img src="assets/img/galeria/WhatsApp Image 2026-03-31 at 09.30.06.webp" alt="Frutas" loading="lazy" decoding="async" width="400" height="300">
                     </div>
                     <div class="product-feature-content">
                         <div class="product-icon-wrap"><i data-lucide="apple" class="icon-3d"></i></div>
@@ -105,7 +111,7 @@
 
                 <div class="product-feature reverse reveal-right" style="--delay:0.2s">
                     <div class="product-feature-img">
-                        <img src="ativa-imagens/quickwebp-converted/WhatsApp Image 2026-04-14 at 13.48.04 (1).webp" alt="Verduras e Legumes" loading="lazy" width="400" height="300">
+                        <img src="assets/img/galeria/WhatsApp Image 2026-04-14 at 13.48.04 (1).webp" alt="Verduras e Legumes" loading="lazy" decoding="async" width="400" height="300">
                     </div>
                     <div class="product-feature-content">
                         <div class="product-icon-wrap"><i data-lucide="salad" class="icon-3d"></i></div>
@@ -119,7 +125,7 @@
 
                 <div class="product-feature reveal-left" style="--delay:0.3s">
                     <div class="product-feature-img">
-                        <img src="ativa-imagens/quickwebp-converted/WhatsApp Image 2026-04-14 at 13.48.04 (2).webp" alt="Temperos" loading="lazy" width="400" height="300">
+                        <img src="assets/img/galeria/WhatsApp Image 2026-04-14 at 13.48.04 (2).webp" alt="Temperos" loading="lazy" decoding="async" width="400" height="300">
                     </div>
                     <div class="product-feature-content">
                         <div class="product-icon-wrap"><i data-lucide="flame" class="icon-3d"></i></div>
@@ -133,7 +139,7 @@
 
                 <div class="product-feature reverse reveal-right" style="--delay:0.4s">
                     <div class="product-feature-img">
-                        <img src="ativa-imagens/farinha_farinaceos.jpg" alt="Farináceos" loading="lazy" width="400" height="300">
+                        <img src="assets/img/galeria/farinha_farinaceos.webp" alt="Farináceos" loading="lazy" decoding="async" width="400" height="300">
                     </div>
                     <div class="product-feature-content">
                         <div class="product-icon-wrap"><i data-lucide="wheat" class="icon-3d"></i></div>
@@ -150,19 +156,19 @@
             <div class="products-gallery reveal">
                 <h2 class="section-title" style="text-align:center; margin: 80px 0 48px;">Galeria de <span class="text-gradient">Produtos</span></h2>
                 <div class="gallery-masonry products-masonry">
-                    <div class="gallery-item"><img src="ativa-imagens/WhatsApp Image 2026-03-31 at 09.30.06.webp" alt="Produtos ATIVA" loading="lazy" width="300" height="300"><div class="gallery-overlay"><span>Frutas Frescas</span></div></div>
-                    <div class="gallery-item gallery-tall"><img src="ativa-imagens/WhatsApp Image 2026-03-31 at 09.29.12.webp" alt="Produtos ATIVA" loading="lazy" width="300" height="600"><div class="gallery-overlay"><span>Verduras</span></div></div>
-                    <div class="gallery-item"><img src="ativa-imagens/quickwebp-converted/WhatsApp Image 2026-04-08 at 12.32.26.webp" alt="Produtos ATIVA" loading="lazy" width="300" height="300"><div class="gallery-overlay"><span>Temperos</span></div></div>
-                    <div class="gallery-item gallery-wide"><img src="ativa-imagens/quickwebp-converted/WhatsApp Image 2026-04-14 at 13.48.04.webp" alt="Produtos ATIVA" loading="lazy" width="600" height="300"><div class="gallery-overlay"><span>Hortifrutis</span></div></div>
-                    <div class="gallery-item"><img src="ativa-imagens/quickwebp-converted/WhatsApp Image 2026-04-14 at 13.48.04 (2).webp" alt="Produtos ATIVA" loading="lazy" width="300" height="300"><div class="gallery-overlay"><span>Selecionados</span></div></div>
-                    <div class="gallery-item"><img src="ativa-imagens/WhatsApp Image 2026-03-31 at 09.30.22.webp" alt="Produtos ATIVA" loading="lazy" width="300" height="300"><div class="gallery-overlay"><span>Variedade</span></div></div>
-                    <div class="gallery-item gallery-tall"><img src="ativa-imagens/WhatsApp Image 2026-03-31 at 09.31.37.webp" alt="Produtos ATIVA" loading="lazy" width="300" height="600"><div class="gallery-overlay"><span>Qualidade</span></div></div>
-                    <div class="gallery-item"><img src="ativa-imagens/WhatsApp Image 2026-03-31 at 09.33.38.webp" alt="Produtos ATIVA" loading="lazy" width="300" height="300"><div class="gallery-overlay"><span>Frescor</span></div></div>
+                    <div class="gallery-item"><img src="assets/img/galeria/WhatsApp Image 2026-03-31 at 09.30.06.webp" alt="Produtos ATIVA" loading="lazy" decoding="async" width="300" height="300"><div class="gallery-overlay"><span>Frutas Frescas</span></div></div>
+                    <div class="gallery-item gallery-tall"><img src="assets/img/galeria/WhatsApp Image 2026-03-31 at 09.29.12.webp" alt="Produtos ATIVA" loading="lazy" decoding="async" width="300" height="600"><div class="gallery-overlay"><span>Verduras</span></div></div>
+                    <div class="gallery-item"><img src="assets/img/galeria/WhatsApp Image 2026-04-08 at 12.32.26.webp" alt="Produtos ATIVA" loading="lazy" decoding="async" width="300" height="300"><div class="gallery-overlay"><span>Temperos</span></div></div>
+                    <div class="gallery-item gallery-wide"><img src="assets/img/galeria/WhatsApp Image 2026-04-14 at 13.48.04.webp" alt="Produtos ATIVA" loading="lazy" decoding="async" width="600" height="300"><div class="gallery-overlay"><span>Hortifrutis</span></div></div>
+                    <div class="gallery-item"><img src="assets/img/galeria/WhatsApp Image 2026-04-14 at 13.48.04 (2).webp" alt="Produtos ATIVA" loading="lazy" decoding="async" width="300" height="300"><div class="gallery-overlay"><span>Selecionados</span></div></div>
+                    <div class="gallery-item"><img src="assets/img/galeria/WhatsApp Image 2026-03-31 at 09.30.22.webp" alt="Produtos ATIVA" loading="lazy" decoding="async" width="300" height="300"><div class="gallery-overlay"><span>Variedade</span></div></div>
+                    <div class="gallery-item gallery-tall"><img src="assets/img/galeria/WhatsApp Image 2026-03-31 at 09.31.37.webp" alt="Produtos ATIVA" loading="lazy" decoding="async" width="300" height="600"><div class="gallery-overlay"><span>Qualidade</span></div></div>
+                    <div class="gallery-item"><img src="assets/img/galeria/WhatsApp Image 2026-03-31 at 09.33.38.webp" alt="Produtos ATIVA" loading="lazy" decoding="async" width="300" height="300"><div class="gallery-overlay"><span>Frescor</span></div></div>
                 </div>
             </div>
 
             <div class="produtos-cta reveal" style="text-align:center; margin-top:48px;">
-                <a href="https://wa.me/5562999789984" target="_blank" class="btn btn-primary" style="font-size:1.1rem; padding:16px 36px;">
+                <a href="https://wa.me/5562999789984?text=Olá,%20gostaria%20de%20saber%20melhor%20como%20funcionam%20suas%20entregas%20e%20seus%20preços" target="_blank" class="btn btn-primary" style="font-size:1.1rem; padding:16px 36px;">
                     <i data-lucide="message-circle" class="icon-3d"></i> Faça seu Pedido Agora
                 </a>
             </div>
@@ -172,19 +178,19 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-brand"><img src="logo_hortifruti.webp" alt="ATIVA" class="footer-logo" width="180" height="60" loading="lazy"><p>Distribuindo qualidade e frescor desde 2001.</p></div>
+                <div class="footer-brand"><img src="assets/img/logo_hortifruti.webp" alt="ATIVA" class="footer-logo" width="180" height="60" loading="lazy" decoding="async"><p>Distribuindo qualidade e frescor desde 2001.</p></div>
                 <div class="footer-links"><h4>Navegação</h4><a href="index.html">Início</a><a href="ativa.html">Quem Somos</a><a href="produtos.html">Produtos</a><a href="trabalho.html">Nosso Trabalho</a></div>
-                <div class="footer-links"><h4>Contato</h4><a href="https://wa.me/5562999789984" target="_blank">(62) 99978-9984</a><a href="https://instagram.com/ativa_distribuidora1" target="_blank">@ativa_distribuidora1</a></div>
+                <div class="footer-links"><h4>Contato</h4><a href="https://wa.me/5562999789984?text=Olá,%20gostaria%20de%20saber%20melhor%20como%20funcionam%20suas%20entregas%20e%20seus%20preços" target="_blank">(62) 99978-9984</a><a href="https://instagram.com/ativa_distribuidora1" target="_blank">@ativa_distribuidora1</a></div>
             </div>
             <div class="footer-bottom"><p>&copy; 2026 ATIVA Distribuidora. Todos os direitos reservados.</p></div>
         </div>
     </footer>
 
-    <a href="https://wa.me/5562999789984" target="_blank" class="whatsapp-float" aria-label="WhatsApp">
+    <a href="https://wa.me/5562999789984?text=Olá,%20gostaria%20de%20saber%20melhor%20como%20funcionam%20suas%20entregas%20e%20seus%20preços" target="_blank" class="whatsapp-float" aria-label="WhatsApp">
         <div class="whatsapp-pulse"></div>
         <div class="whatsapp-icon"><svg viewBox="0 0 32 32" fill="white"><path d="M16.004 0h-.008C7.174 0 0 7.176 0 16c0 3.5 1.128 6.744 3.046 9.378L1.054 31.29l6.118-1.958A15.9 15.9 0 0016.004 32C24.826 32 32 24.822 32 16S24.826 0 16.004 0zm9.336 22.594c-.39 1.1-1.932 2.014-3.168 2.28-.846.18-1.95.324-5.67-1.218-4.762-1.972-7.826-6.81-8.064-7.126-.23-.316-1.932-2.572-1.932-4.904 0-2.332 1.224-3.476 1.658-3.952.434-.476.948-.596 1.264-.596.316 0 .632.004.908.016.292.014.684-.11 1.07.816.39.948 1.33 3.248 1.446 3.484.118.236.196.512.04.826-.158.316-.236.512-.472.788-.236.276-.496.616-.71.826-.236.236-.482.492-.208.968.276.476 1.224 2.02 2.63 3.272 1.808 1.61 3.332 2.108 3.808 2.344.476.236.752.196 1.028-.118.276-.316 1.186-1.382 1.504-1.858.316-.476.634-.394 1.07-.236.434.158 2.768 1.304 3.244 1.54.476.236.792.354.91.552.116.196.116 1.146-.276 2.246z"/></svg></div>
     </a>
 
-    <script src="script.js"></script>
+    <script src="assets/js/script.js" defer></script>
 </body>
 </html>

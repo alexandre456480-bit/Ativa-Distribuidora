@@ -41,6 +41,7 @@ html {
     scroll-behavior: smooth;
     scrollbar-width: thin;
     scrollbar-color: var(--moss) var(--bone);
+    overflow-x: clip;
 }
 
 body {
@@ -48,7 +49,6 @@ body {
     color: var(--cafe-noir);
     background: var(--bone);
     overflow-x: hidden;
-    cursor: none;
     line-height: 1.6;
 }
 
@@ -301,18 +301,19 @@ ul {
     align-items: center;
 }
 
-.hero::before {
-    content: '';
+.hero-picture {
     position: absolute;
-    top: 0;
-    left: 0;
+    inset: 0;
     width: 100%;
     height: 100%;
-    background-image: url('hero.webp');
-    background-size: cover;
-    background-position: center top;
-    background-repeat: no-repeat;
     z-index: -1;
+    overflow: clip;
+}
+
+.hero-img-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     animation: heroBgZoom 20s ease-in-out infinite alternate;
     will-change: transform;
 }
@@ -324,10 +325,6 @@ ul {
     100% {
         transform: scale(1.1);
     }
-}
-
-.hero-bg-gradient {
-    display: none; /* Removido para a imagem ficar sem transparência/escurecimento */
 }
 
 .hero-particles {
@@ -598,6 +595,7 @@ ul {
 .section {
     position: relative;
     padding: 120px 0;
+    overflow: hidden;
 }
 
 .section-autoridade {
@@ -1411,9 +1409,6 @@ a.contato-link:hover {
         box-sizing: border-box;
     }
 
-    .hero::before {
-        background-position: center center;
-    }
 
     .hero-text {
         padding-right: 0;

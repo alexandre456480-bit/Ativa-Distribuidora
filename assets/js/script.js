@@ -4,13 +4,24 @@
 
 document.addEventListener('DOMContentLoaded', () => {
     lucide.createIcons();
-    initCustomCursor();
     initNavbar();
-
-    initParticles();
     initScrollReveal();
-    initCountUp();
     initScrollProgress();
+
+    // Tarefas não-críticas: executar quando idle
+    if ('requestIdleCallback' in window) {
+        requestIdleCallback(() => {
+            initCustomCursor();
+            initParticles();
+            initCountUp();
+        });
+    } else {
+        setTimeout(() => {
+            initCustomCursor();
+            initParticles();
+            initCountUp();
+        }, 200);
+    }
 });
 
 /* --- Custom Cursor --- */
@@ -68,7 +79,7 @@ function initNavbar() {
 function initParticles() {
     const container = document.getElementById('heroParticles');
     if (!container) return;
-    for (let i = 0; i < 30; i++) {
+    for (let i = 0; i < 15; i++) {
         const particle = document.createElement('div');
         particle.className = 'particle';
         particle.style.left = Math.random() * 100 + '%';

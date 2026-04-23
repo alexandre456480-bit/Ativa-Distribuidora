@@ -1364,15 +1364,17 @@ a.contato-link:hover {
     }
 
     .nav-logo img {
-        height: 90px;
-        position: absolute;
-        top: 50%;
-        left: 0;
-        transform: translateY(-50%);
+        height: 60px;
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+        max-width: 60vw;
+        object-fit: contain;
     }
 
     .navbar.scrolled .nav-logo img {
-        height: 80px;
+        height: 55px;
     }
 
     .nav-links {
@@ -1394,10 +1396,20 @@ a.contato-link:hover {
         right: 0;
     }
 
+    .hero {
+        min-height: 100svh;
+    }
+
     .hero-content {
         flex-direction: column;
-        padding: 100px 24px 0;
+        padding: 120px 24px 60px;
         text-align: center;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .hero::before {
+        background-position: center center;
     }
 
     .hero-text {
@@ -1466,20 +1478,37 @@ a.contato-link:hover {
 
 @media (max-width: 480px) {
     .hero-title {
-        font-size: 2.4rem;
+        font-size: clamp(2rem, 8vw, 2.5rem);
+        word-wrap: break-word;
+        hyphens: auto;
+    }
+
+    .hero-description {
+        font-size: 0.95rem;
     }
 
     .hero-stats {
         flex-direction: column;
         gap: 16px;
+        align-items: center;
     }
 
     .hero-buttons {
         flex-direction: column;
+        width: 100%;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+        justify-content: center;
     }
 
     .hero-image-frame {
         width: 300px;
         height: 300px;
+    }
+
+    .shape-divider svg {
+        height: 50px;
     }
 }

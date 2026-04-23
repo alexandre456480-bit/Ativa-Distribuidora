@@ -1,7 +1,7 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ativadistribuidora.sbs/sitemap.xml
+Sitemap: https://ativadistribuidora.sbs/sitemap_ativa.xml
 
 User-agent: Googlebot
 Allow: /

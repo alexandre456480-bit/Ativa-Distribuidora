@@ -2,3 +2,9 @@ User-agent: *
 Allow: /
 
 Sitemap: https://ativadistribuidora.sbs/sitemap.xml
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /assets/img/

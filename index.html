@@ -105,34 +105,50 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "Quais tipos de produtos a ATIVA Distribuidora entrega?",
+          "name": "Vocês atendem apenas CNPJ?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "A ATIVA distribui frutas, verduras, legumes, temperos, ervas e farináceos frescos, todos selecionados diretamente no CEASA de Goiânia."
+            "text": "Sim, a ATIVA Distribuidora atende exclusivamente empresas com CNPJ. Nosso foco é o fornecimento no atacado para restaurantes, supermercados, hamburguerias, pizzarias, hotéis e outros estabelecimentos comerciais."
           }
         },
         {
           "@type": "Question",
-          "name": "Para quais regiões de Goiânia a ATIVA faz entrega?",
+          "name": "Existe um pedido mínimo para compra?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Realizamos entregas em toda Goiânia, Aparecida de Goiânia e Senador Canedo, com frota própria e pontualidade garantida."
+            "text": "Sim, por trabalharmos exclusivamente no atacado, existe um valor mínimo de pedido. Entre em contato pelo nosso WhatsApp para saber os detalhes e condições especiais para o seu tipo de negócio."
           }
         },
         {
           "@type": "Question",
-          "name": "Qual o horário de funcionamento da ATIVA Distribuidora?",
+          "name": "Qual o prazo e horário de entrega?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Funcionamos de segunda a sexta-feira, em horário comercial. As entregas são realizadas pela manhã conforme agendamento."
+            "text": "As entregas são realizadas de segunda a sexta-feira, pela manhã, conforme agendamento prévio. Pedidos feitos até o final do dia são separados no CEASA na madrugada seguinte e entregues logo pela manhã com pontualidade garantida."
           }
         },
         {
           "@type": "Question",
-          "name": "Como faço meu primeiro pedido na ATIVA?",
+          "name": "O que acontece se o produto chegar com problema?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "É simples! Entre em contato pelo WhatsApp (62) 99978-9984, envie sua lista de produtos e nossa equipe cuidará de tudo, da seleção à entrega."
+            "text": "Trabalhamos com controle rigoroso de qualidade na seleção dos produtos. Caso algum item chegue fora do padrão, realizamos a troca ou reposição na próxima entrega sem custo adicional."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quais as formas de pagamento aceitas?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Aceitamos Pix, transferência bancária, boleto e dinheiro. Para clientes recorrentes, oferecemos condições diferenciadas de pagamento."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Vocês entregam fora de Goiânia?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Atualmente nossas entregas cobrem Goiânia, Aparecida de Goiânia e Senador Canedo. Para outras cidades da região metropolitana, entre em contato para verificarmos a viabilidade de atendimento."
           }
         }
       ]
@@ -169,6 +185,7 @@
                 <li><a href="ativa.html" class="nav-link">Quem Somos</a></li>
                 <li><a href="produtos.html" class="nav-link">Produtos</a></li>
                 <li><a href="trabalho.html" class="nav-link">Nosso Trabalho</a></li>
+                <li><a href="blog.html" class="nav-link">Blog</a></li>
                 <li><a href="#contato" class="nav-link nav-cta">Fale Conosco</a></li>
             </ul>
             <button class="nav-toggle" id="navToggle" aria-label="Menu">
@@ -459,6 +476,104 @@
         </div>
         <!-- Organic Shape Divider -->
         <div class="shape-divider entrega-divider">
+            <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
+                <path d="M0,20 Q180,80 360,40 T720,60 T1080,30 T1440,50 L1440,100 L0,100 Z" fill="#354024" />
+            </svg>
+        </div>
+    </section>
+
+    <!-- Seção Dúvidas Frequentes -->
+    <section class="section section-faq" id="faq">
+        <div class="section-bg-pattern"></div>
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag"><i data-lucide="help-circle" class="icon-3d"></i> Dúvidas Frequentes</span>
+                <h2 class="section-title">Perguntas <span class="text-gradient">Frequentes</span></h2>
+                <p class="section-subtitle">Tire suas principais dúvidas sobre nossos serviços de distribuição</p>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item glass-card reveal" style="--delay:0.1s">
+                    <button class="faq-question" id="faq-btn-1" aria-expanded="false" aria-controls="faq-answer-1">
+                        <div class="faq-q-content">
+                            <div class="faq-icon"><i data-lucide="building-2" class="icon-3d"></i></div>
+                            <span>Vocês atendem apenas CNPJ?</span>
+                        </div>
+                        <div class="faq-toggle"><i data-lucide="chevron-down" class="icon-3d"></i></div>
+                    </button>
+                    <div class="faq-answer" id="faq-answer-1">
+                        <p>Sim, a ATIVA Distribuidora atende <strong>exclusivamente empresas com CNPJ</strong>. Nosso foco é o fornecimento no atacado para restaurantes, supermercados, hamburguerias, pizzarias, hotéis e outros estabelecimentos comerciais da região metropolitana de Goiânia.</p>
+                    </div>
+                </div>
+                <div class="faq-item glass-card reveal" style="--delay:0.15s">
+                    <button class="faq-question" id="faq-btn-2" aria-expanded="false" aria-controls="faq-answer-2">
+                        <div class="faq-q-content">
+                            <div class="faq-icon"><i data-lucide="package" class="icon-3d"></i></div>
+                            <span>Existe um pedido mínimo para compra?</span>
+                        </div>
+                        <div class="faq-toggle"><i data-lucide="chevron-down" class="icon-3d"></i></div>
+                    </button>
+                    <div class="faq-answer" id="faq-answer-2">
+                        <p>Sim, por trabalharmos exclusivamente no <strong>atacado</strong>, existe um valor mínimo de pedido. Entre em contato pelo nosso WhatsApp para saber os detalhes e condições especiais para o seu tipo de negócio.</p>
+                    </div>
+                </div>
+                <div class="faq-item glass-card reveal" style="--delay:0.2s">
+                    <button class="faq-question" id="faq-btn-3" aria-expanded="false" aria-controls="faq-answer-3">
+                        <div class="faq-q-content">
+                            <div class="faq-icon"><i data-lucide="truck" class="icon-3d"></i></div>
+                            <span>Qual o prazo e horário de entrega?</span>
+                        </div>
+                        <div class="faq-toggle"><i data-lucide="chevron-down" class="icon-3d"></i></div>
+                    </button>
+                    <div class="faq-answer" id="faq-answer-3">
+                        <p>As entregas são realizadas <strong>de segunda a sexta-feira, pela manhã</strong>, conforme agendamento prévio. Pedidos feitos até o final do dia são separados no CEASA na madrugada seguinte e entregues logo pela manhã com <strong>pontualidade garantida</strong>.</p>
+                    </div>
+                </div>
+                <div class="faq-item glass-card reveal" style="--delay:0.25s">
+                    <button class="faq-question" id="faq-btn-4" aria-expanded="false" aria-controls="faq-answer-4">
+                        <div class="faq-q-content">
+                            <div class="faq-icon"><i data-lucide="refresh-cw" class="icon-3d"></i></div>
+                            <span>O que acontece se o produto chegar com problema?</span>
+                        </div>
+                        <div class="faq-toggle"><i data-lucide="chevron-down" class="icon-3d"></i></div>
+                    </button>
+                    <div class="faq-answer" id="faq-answer-4">
+                        <p>Trabalhamos com <strong>controle rigoroso de qualidade</strong> na seleção dos produtos. Caso algum item chegue fora do padrão, realizamos a <strong>troca ou reposição na próxima entrega</strong> sem custo adicional. Sua satisfação é nossa prioridade.</p>
+                    </div>
+                </div>
+                <div class="faq-item glass-card reveal" style="--delay:0.3s">
+                    <button class="faq-question" id="faq-btn-5" aria-expanded="false" aria-controls="faq-answer-5">
+                        <div class="faq-q-content">
+                            <div class="faq-icon"><i data-lucide="credit-card" class="icon-3d"></i></div>
+                            <span>Quais as formas de pagamento aceitas?</span>
+                        </div>
+                        <div class="faq-toggle"><i data-lucide="chevron-down" class="icon-3d"></i></div>
+                    </button>
+                    <div class="faq-answer" id="faq-answer-5">
+                        <p>Aceitamos <strong>Pix, transferência bancária, boleto e dinheiro</strong>. Para clientes recorrentes, oferecemos condições diferenciadas de pagamento. Consulte nosso time comercial para conhecer as opções ideais para o seu negócio.</p>
+                    </div>
+                </div>
+                <div class="faq-item glass-card reveal" style="--delay:0.35s">
+                    <button class="faq-question" id="faq-btn-6" aria-expanded="false" aria-controls="faq-answer-6">
+                        <div class="faq-q-content">
+                            <div class="faq-icon"><i data-lucide="map-pin" class="icon-3d"></i></div>
+                            <span>Vocês entregam fora de Goiânia?</span>
+                        </div>
+                        <div class="faq-toggle"><i data-lucide="chevron-down" class="icon-3d"></i></div>
+                    </button>
+                    <div class="faq-answer" id="faq-answer-6">
+                        <p>Atualmente nossas entregas cobrem <strong>Goiânia, Aparecida de Goiânia e Senador Canedo</strong>. Para outras cidades da região metropolitana, entre em contato para verificarmos a viabilidade de atendimento.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="faq-cta reveal">
+                <p>Ainda tem dúvidas? Fale diretamente com a nossa equipe!</p>
+                <a href="https://wa.me/5562999789984?text=Olá,%20tenho%20uma%20dúvida%20sobre%20os%20serviços%20da%20ATIVA" target="_blank" class="btn btn-primary">
+                    <i data-lucide="message-circle" class="icon-3d"></i> Falar no WhatsApp
+                </a>
+            </div>
+        </div>
+        <!-- Shape Divider -->
+        <div class="shape-divider faq-divider">
             <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
                 <path d="M0,20 Q180,80 360,40 T720,60 T1080,30 T1440,50 L1440,100 L0,100 Z" fill="#354024" />
             </svg>

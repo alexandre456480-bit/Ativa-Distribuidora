@@ -593,6 +593,8 @@ ul {
    SECTION STYLES
    ============================================ */
 .section {
+    content-visibility: auto;
+    contain-intrinsic-size: 1000px;
     position: relative;
     padding: 120px 0;
     overflow: hidden;

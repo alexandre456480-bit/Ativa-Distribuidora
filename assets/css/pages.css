@@ -668,6 +668,36 @@
     border-top: 1px solid rgba(136, 144, 99, 0.15);
 }
 
+/* --- FAQ Category Headers (faq.html) --- */
+.faq-category-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 28px;
+}
+
+.faq-cat-icon {
+    width: 52px; height: 52px;
+    background: linear-gradient(135deg, var(--moss), var(--kombu));
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--bone);
+    box-shadow: 0 4px 12px rgba(136, 144, 99, 0.25);
+    flex-shrink: 0;
+}
+
+.faq-cat-icon .icon-3d { width: 24px; height: 24px; }
+
+.faq-cat-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.4rem, 2.5vw, 1.8rem);
+    font-weight: 700;
+    color: var(--kombu);
+    line-height: 1.2;
+}
+
 /* ============================================
    RESPONSIVE
    ============================================ */

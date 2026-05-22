@@ -1518,6 +1518,16 @@ a.contato-link:hover {
 }
 
 @media (max-width: 768px) {
+    /* Reset de Reveals no Mobile para garantir exibição imediata e melhor performance */
+    .reveal,
+    .reveal-left,
+    .reveal-right,
+    .reveal-scale {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
+
     body {
         cursor: auto;
     }

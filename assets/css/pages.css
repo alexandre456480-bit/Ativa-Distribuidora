@@ -554,6 +554,17 @@
     margin: 0 auto;
 }
 
+/* Desativa animações de reveal no artigo do blog para leitura imediata e evitar bugs */
+.blog-article .reveal,
+.blog-article .reveal-left,
+.blog-article .reveal-right,
+.blog-article .reveal-scale {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+}
+
+
 .blog-article-meta {
     display: flex;
     flex-wrap: wrap;

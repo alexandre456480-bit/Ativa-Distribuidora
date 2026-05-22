@@ -3,25 +3,65 @@
    ============================================ */
 
 document.addEventListener('DOMContentLoaded', () => {
-    lucide.createIcons();
-    initNavbar();
-    initScrollReveal();
-    initScrollProgress();
-    initFaqAccordion();
+    // Inicialização robusta e tolerante a falhas de componentes independentes
+    
+    // 1. Lucide Icons (Tolerante a atrasos na CDN)
+    try {
+        if (typeof lucide !== 'undefined') {
+            lucide.createIcons();
+        } else {
+            console.warn('Lucide Icons CDN não carregou a tempo. Agendando para pós-load.');
+            window.addEventListener('load', () => {
+                if (typeof lucide !== 'undefined') {
+                    lucide.createIcons();
+                } else {
+                    console.error('Falha crítica ao carregar Lucide Icons CDN.');
+                }
+            });
+        }
+    } catch (e) {
+        console.error('Erro na inicialização do Lucide:', e);
+    }
 
-    // Tarefas não-críticas: executar quando idle
+    // 2. Navbar & Menu Mobile
+    try {
+        initNavbar();
+    } catch (e) {
+        console.error('Erro ao inicializar Navbar:', e);
+    }
+
+    // 3. Scroll Reveal (Animações de entrada)
+    try {
+        initScrollReveal();
+    } catch (e) {
+        console.error('Erro ao inicializar Scroll Reveal:', e);
+    }
+
+    // 4. Barra de Progresso de Rolagem
+    try {
+        initScrollProgress();
+    } catch (e) {
+        console.error('Erro ao inicializar Scroll Progress:', e);
+    }
+
+    // 5. Accordion de FAQ
+    try {
+        initFaqAccordion();
+    } catch (e) {
+        console.error('Erro ao inicializar FAQ:', e);
+    }
+
+    // Tarefas não-críticas: executar em segundo plano (idle)
+    const runNonCritical = () => {
+        try { initCustomCursor(); } catch (e) { console.warn('Erro Custom Cursor:', e); }
+        try { initParticles(); } catch (e) { console.warn('Erro Particles:', e); }
+        try { initCountUp(); } catch (e) { console.warn('Erro CountUp:', e); }
+    };
+
     if ('requestIdleCallback' in window) {
-        requestIdleCallback(() => {
-            initCustomCursor();
-            initParticles();
-            initCountUp();
-        });
+        requestIdleCallback(runNonCritical);
     } else {
-        setTimeout(() => {
-            initCustomCursor();
-            initParticles();
-            initCountUp();
-        }, 200);
+        setTimeout(runNonCritical, 200);
     }
 });
 

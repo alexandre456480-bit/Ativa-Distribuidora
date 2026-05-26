@@ -558,11 +558,18 @@
 .blog-article .reveal,
 .blog-article .reveal-left,
 .blog-article .reveal-right,
-.blog-article .reveal-scale {
+.blog-article .reveal-scale,
+body.blog-page-no-anim .reveal,
+body.blog-page-no-anim .reveal-left,
+body.blog-page-no-anim .reveal-right,
+body.blog-page-no-anim .reveal-scale,
+body.blog-page-no-anim .blog-card {
     opacity: 1 !important;
     transform: none !important;
     transition: none !important;
+    animation: none !important;
 }
+
 
 
 .blog-article-meta {

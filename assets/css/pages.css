@@ -554,21 +554,23 @@
     margin: 0 auto;
 }
 
-/* Desativa animações de reveal no artigo do blog para leitura imediata e evitar bugs */
-.blog-article .reveal,
-.blog-article .reveal-left,
-.blog-article .reveal-right,
-.blog-article .reveal-scale,
+/* Desativa todo tipo de transição e animação nas páginas de blog para carregamento imediato e sem delays */
+body.blog-page-no-anim,
+body.blog-page-no-anim * {
+    transition-duration: 0s !important;
+    transition-delay: 0s !important;
+    animation-duration: 0s !important;
+    animation-delay: 0s !important;
+}
+
 body.blog-page-no-anim .reveal,
 body.blog-page-no-anim .reveal-left,
 body.blog-page-no-anim .reveal-right,
-body.blog-page-no-anim .reveal-scale,
-body.blog-page-no-anim .blog-card {
+body.blog-page-no-anim .reveal-scale {
     opacity: 1 !important;
     transform: none !important;
-    transition: none !important;
-    animation: none !important;
 }
+
 
 
 

@@ -51,6 +51,13 @@ document.addEventListener('DOMContentLoaded', () => {
         console.error('Erro ao inicializar FAQ:', e);
     }
 
+    // 6. WhatsApp Features (Tooltip & Mensagem de Link)
+    try {
+        initWhatsAppFeatures();
+    } catch (e) {
+        console.error('Erro ao inicializar WhatsApp Features:', e);
+    }
+
     // Tarefas não-críticas: executar em segundo plano (idle)
     const runNonCritical = () => {
         try { initCustomCursor(); } catch (e) { console.warn('Erro Custom Cursor:', e); }
@@ -213,4 +220,38 @@ function initScrollProgress() {
         const h = document.documentElement.scrollHeight - window.innerHeight;
         bar.style.width = (window.scrollY / h * 100) + '%';
     }, { passive: true });
+}
+
+/* --- WhatsApp Features (Tooltip & Mensagem de Link) --- */
+function initWhatsAppFeatures() {
+    // 1. Atualiza todos os links do WhatsApp com a mensagem personalizada
+    const message = "Olá, vim pelo site e gostaria de saber mais";
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappLinks = document.querySelectorAll('a[href*="wa.me"]');
+    whatsappLinks.forEach(link => {
+        link.href = `https://wa.me/5562999789984?text=${encodedMessage}`;
+    });
+
+    // 2. Gerencia o Tooltip do Botão Flutuante
+    const floatBtn = document.querySelector('.whatsapp-float');
+    if (floatBtn) {
+        let tooltip = floatBtn.querySelector('.whatsapp-tooltip');
+        if (!tooltip) {
+            tooltip = document.createElement('div');
+            tooltip.className = 'whatsapp-tooltip';
+            tooltip.textContent = 'Ainda com dúvida? Veja nossos preços';
+            floatBtn.appendChild(tooltip);
+        }
+
+        const handleScroll = () => {
+            if (window.scrollY > 80) {
+                tooltip.classList.add('visible');
+            } else {
+                tooltip.classList.remove('visible');
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll, { passive: true });
+        handleScroll();
+    }
 }

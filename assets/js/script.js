@@ -239,7 +239,7 @@ function initWhatsAppFeatures() {
         if (!tooltip) {
             tooltip = document.createElement('div');
             tooltip.className = 'whatsapp-tooltip';
-            tooltip.textContent = 'Ainda com dúvida? Veja nossos preços';
+            tooltip.textContent = 'Faça seu pedido hoje e entregaremos amanhã no seu estabelecimento!';
             floatBtn.appendChild(tooltip);
         }
 

@@ -1688,6 +1688,14 @@ a.contato-link:hover {
         grid-template-columns: 1fr;
         gap: 32px;
     }
+
+    .whatsapp-tooltip {
+        font-size: 0.75rem;
+        white-space: normal;
+        width: 220px;
+        padding: 8px 12px;
+        text-align: center;
+    }
 }
 
 @media (max-width: 480px) {

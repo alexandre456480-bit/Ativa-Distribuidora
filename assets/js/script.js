@@ -243,15 +243,19 @@ function initWhatsAppFeatures() {
             floatBtn.appendChild(tooltip);
         }
 
-        const handleScroll = () => {
-            if (window.scrollY > 80) {
+        const runTooltipLoop = () => {
+            tooltip.classList.remove('visible');
+            
+            const showTimeout = setTimeout(() => {
                 tooltip.classList.add('visible');
-            } else {
+            }, 20000);
+
+            const hideTimeout = setTimeout(() => {
                 tooltip.classList.remove('visible');
-            }
+                runTooltipLoop();
+            }, 40000);
         };
 
-        window.addEventListener('scroll', handleScroll, { passive: true });
-        handleScroll();
+        runTooltipLoop();
     }
 }

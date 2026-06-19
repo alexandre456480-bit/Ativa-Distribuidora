@@ -1734,3 +1734,101 @@ a.contato-link:hover {
         height: 50px;
     }
 }
+
+/* ============================================
+   SEÇÃO ESTEIRA DE IMAGENS (GALERIA)
+   ============================================ */
+.galeria-esteira-sec {
+    width: 100%;
+    overflow: hidden;
+    background: var(--bone);
+    padding: 50px 0;
+    position: relative;
+    border-top: 1px solid rgba(136, 144, 99, 0.12);
+    border-bottom: 1px solid rgba(136, 144, 99, 0.12);
+    z-index: 10;
+}
+
+.esteira-wrapper {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 24px;
+    overflow: hidden;
+}
+
+.esteira-track-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.esteira-track {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    cursor: grab;
+    user-select: none;
+    -webkit-overflow-scrolling: touch;
+    padding: 10px 0;
+}
+
+/* Esconder barra de rolagem */
+.esteira-track::-webkit-scrollbar {
+    display: none;
+}
+.esteira-track {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.esteira-track.grabbing {
+    cursor: grabbing;
+}
+
+.esteira-slide {
+    flex: 0 0 calc(33.333% - 14px);
+    width: calc(33.333% - 14px);
+    height: 260px;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    pointer-events: none;
+    transition: transform 0.4s cubic-bezier(.22,1,.36,1), box-shadow 0.4s ease;
+}
+
+.esteira-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+    user-select: none;
+}
+
+/* Efeito de elevação suave */
+.galeria-esteira-sec:hover .esteira-slide {
+    box-shadow: 0 6px 18px rgba(53, 64, 36, 0.06);
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    .esteira-slide {
+        flex: 0 0 calc(50% - 10px);
+        width: calc(50% - 10px);
+        height: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    .esteira-wrapper {
+        padding: 0 16px;
+    }
+    .esteira-track {
+        gap: 16px;
+    }
+    .esteira-slide {
+        flex: 0 0 calc(75% - 12px);
+        width: calc(75% - 12px);
+        height: 150px;
+    }
+}

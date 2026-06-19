@@ -58,6 +58,14 @@ document.addEventListener('DOMContentLoaded', () => {
         console.error('Erro ao inicializar WhatsApp Features:', e);
     }
 
+    // 7. Esteiras de Imagens (Galeria Home)
+    try {
+        initEsteira('esteiraTrack1', 1);
+        initEsteira('esteiraTrack2', -1);
+    } catch (e) {
+        console.error('Erro ao inicializar Esteiras de Imagens:', e);
+    }
+
     // Tarefas não-críticas: executar em segundo plano (idle)
     const runNonCritical = () => {
         try { initCustomCursor(); } catch (e) { console.warn('Erro Custom Cursor:', e); }
@@ -258,4 +266,124 @@ function initWhatsAppFeatures() {
 
         runTooltipLoop();
     }
+}
+
+/* --- Esteira de Imagens (Galeria Home) --- */
+function initEsteira(trackId, direction = 1) {
+    const track = document.getElementById(trackId);
+    if (!track) return;
+
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+    let animationId;
+    let autoplaySpeed = 1; // Pixels rolando por frame
+    let isInteracting = false;
+    let interactionTimeout;
+
+    // Clonar slides para loop infinito sem falhas
+    const slides = Array.from(track.children);
+    const numClones = Math.max(slides.length, 6); // Garante clones suficientes para preencher
+    
+    // Anexa clones ao final
+    for (let i = 0; i < numClones; i++) {
+        const clone = slides[i % slides.length].cloneNode(true);
+        track.appendChild(clone);
+    }
+    // Insere clones no início
+    for (let i = numClones - 1; i >= 0; i--) {
+        const clone = slides[i % slides.length].cloneNode(true);
+        track.insertBefore(clone, track.firstChild);
+    }
+
+    // Define scroll inicial para o começo dos slides reais (pulando os clones iniciais)
+    const slideStyle = window.getComputedStyle(slides[0]);
+    const slideMargin = parseFloat(slideStyle.marginRight) || 0;
+    const slideWidth = slides[0].getBoundingClientRect().width + slideMargin + 20; // 20 é o gap do CSS
+    const initialOffset = slideWidth * numClones;
+
+    // Inicialização da posição do scroll
+    track.scrollLeft = initialOffset;
+
+    const startDrag = (e) => {
+        isDown = true;
+        isInteracting = true;
+        track.classList.add('grabbing');
+        startX = (e.pageX || e.touches[0].pageX) - track.offsetLeft;
+        scrollLeft = track.scrollLeft;
+        cancelAnimationFrame(animationId);
+        clearTimeout(interactionTimeout);
+    };
+
+    const stopDrag = () => {
+        if (!isDown) return;
+        isDown = false;
+        track.classList.remove('grabbing');
+        
+        // Retoma o autoplay suavemente após 1.5s de inatividade
+        interactionTimeout = setTimeout(() => {
+            isInteracting = false;
+            requestAnimationFrame(autoplay);
+        }, 1500);
+    };
+
+    const moveDrag = (e) => {
+        if (!isDown) return;
+        
+        // Apenas previne o padrão em movimentos que possam arrastar a página verticalmente se for mouse drag
+        if (e.type === 'touchmove') {
+            // Se o movimento for predominantemente horizontal, previne rolagem de página
+            const touch = e.touches[0];
+            const movementX = Math.abs(touch.pageX - (startX + track.offsetLeft));
+            if (movementX > 5) {
+                if (e.cancelable) e.preventDefault();
+            }
+        } else {
+            e.preventDefault();
+        }
+
+        const x = (e.pageX || (e.touches && e.touches[0].pageX)) - track.offsetLeft;
+        const walk = (x - startX) * 1.5; // Fator de sensibilidade
+        track.scrollLeft = scrollLeft - walk;
+        checkBounds();
+    };
+
+    const checkBounds = () => {
+        const totalContentWidth = slideWidth * slides.length;
+        
+        // Se rolar muito para a esquerda (entrou na seção de clones iniciais)
+        if (track.scrollLeft < initialOffset - totalContentWidth / 2) {
+            track.scrollLeft += totalContentWidth;
+        }
+        // Se rolar muito para a direita (passou dos slides reais para a seção final de clones)
+        else if (track.scrollLeft > initialOffset + totalContentWidth / 2) {
+            track.scrollLeft -= totalContentWidth;
+        }
+    };
+
+    // Eventos Mouse
+    track.addEventListener('mousedown', startDrag);
+    track.addEventListener('mouseleave', stopDrag);
+    track.addEventListener('mouseup', stopDrag);
+    track.addEventListener('mousemove', moveDrag);
+
+    // Eventos Touch (Mobile)
+    track.addEventListener('touchstart', startDrag, { passive: true });
+    track.addEventListener('touchend', stopDrag, { passive: true });
+    track.addEventListener('touchmove', moveDrag, { passive: false });
+
+    // Autoplay usando requestAnimationFrame para máxima otimização (60fps)
+    const autoplay = () => {
+        if (!isInteracting) {
+            // Move na direção configurada (direction = 1 para esquerda, direction = -1 para direita)
+            track.scrollLeft += (autoplaySpeed * direction);
+            checkBounds();
+            animationId = requestAnimationFrame(autoplay);
+        }
+    };
+
+    // Iniciar a esteira automática após um pequeno delay para carregar imagens
+    setTimeout(() => {
+        requestAnimationFrame(autoplay);
+    }, 500);
 }

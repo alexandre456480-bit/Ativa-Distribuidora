@@ -557,8 +557,10 @@
 /* Desativa todo tipo de transição e animação nas páginas de blog para carregamento imediato e sem delays */
 body.blog-page-no-anim,
 body.blog-page-no-anim * {
+    transition: none !important;
     transition-duration: 0s !important;
     transition-delay: 0s !important;
+    animation: none !important;
     animation-duration: 0s !important;
     animation-delay: 0s !important;
 }

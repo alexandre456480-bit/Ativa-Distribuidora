@@ -151,6 +151,10 @@ function initParticles() {
 /* --- Scroll Reveal --- */
 function initScrollReveal() {
     const reveals = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
+    if (document.body.classList.contains('blog-page-no-anim')) {
+        reveals.forEach(el => el.classList.add('visible'));
+        return;
+    }
 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {

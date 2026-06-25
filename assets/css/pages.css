@@ -749,3 +749,26 @@ body.blog-page-no-anim .reveal-scale {
     .blog-article-nav { flex-direction: column; }
     .blog-article-body h2 { font-size: 1.25rem; }
 }
+
+/* --- Correção de contraste na seção de contato (fundo escuro) --- */
+.section-contato .regiao-card h4 {
+    color: var(--bone) !important;
+}
+.section-contato .regiao-card p {
+    color: rgba(229, 215, 196, 0.8) !important;
+}
+.section-contato .step-card h3 {
+    color: var(--bone) !important;
+}
+.section-contato .step-card p {
+    color: rgba(229, 215, 196, 0.8) !important;
+}
+.section-contato .step-card.glass-card {
+    background: rgba(229, 215, 196, 0.06) !important;
+    border-color: rgba(229, 215, 196, 0.1) !important;
+}
+.section-contato .step-card.glass-card:hover {
+    background: rgba(229, 215, 196, 0.1) !important;
+    border-color: rgba(207, 187, 153, 0.3) !important;
+}
+

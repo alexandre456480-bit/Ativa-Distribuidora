@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Método PEPS no Controle de Estoque de Alimentos Perecíveis: Como Evitar o Desperdício de Insumos Frescos | ATIVA</title>
+    <meta name="description" content="Guia técnico para implementar o método PEPS (Primeiro que Entra, Primeiro que Sai) no controle de estoque de insumos alimentares frescos. Reduza perdas e otimize custos operacionais.">
+    <meta name="keywords" content="metodo peps alimentos pereciveis, controle de estoque peps, evitar desperdicio alimentos, gestao de estoque fifo, conservacao de insumos frescos, etiquetagem de validade cozinha, organizacao de estoque de alimentos">
+    <link rel="canonical" href="https://ativadistribuidora.sbs/blog/metodo-peps-estoque-alimentos-pereciveis-como-evitar-desperdicio.html">
+    <meta property="og:title" content="Método PEPS no Controle de Estoque de Alimentos Perecíveis: Como Evitar o Desperdício">
+    <meta property="og:description" content="Aprenda a estruturar o fluxo de estoque de insumos frescos com o método PEPS (FIFO). Guia técnico de alta autoridade para cozinhas e lares.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1595855759920-86582396756a?w=1200&q=80">
+    <meta property="og:url" content="https://ativadistribuidora.sbs/blog/metodo-peps-estoque-alimentos-pereciveis-como-evitar-desperdicio.html">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="article:published_time" content="2026-06-29">
+    <meta property="article:author" content="ATIVA Distribuidora">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="robots" content="index, follow">
+    <link rel="icon" type="image/webp" href="../assets/img/logo_hortifruti.webp">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Inter:wght@400;500;600&family=Outfit:wght@500;600&display=swap">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Inter:wght@400;500;600&family=Outfit:wght@500;600&display=swap">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Inter:wght@400;500;600&family=Outfit:wght@500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/styles.css?v=1.5">
+    <link rel="stylesheet" href="../assets/css/pages.css?v=1.3">
+    <script src="https://unpkg.com/lucide@0.344.0" defer></script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Método PEPS no Controle de Estoque de Alimentos Perecíveis: Como Evitar o Desperdício de Insumos Frescos",
+      "description": "Entenda como implementar a metodologia PEPS (FIFO) em cozinhas profissionais e despensas para otimizar o giro de insumos vegetais, prolongar a vida útil de perecíveis e reduzir o desperdício alimentar.",
+      "image": "https://images.unsplash.com/photo-1595855759920-86582396756a?w=1200&q=80",
+      "datePublished": "2026-06-29",
+      "author": {
+        "@type": "Organization",
+        "name": "ATIVA Distribuidora"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "ATIVA Distribuidora",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://ativadistribuidora.sbs/assets/img/logo_hortifruti.webp"
+        }
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Início",
+          "item": "https://ativadistribuidora.sbs/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://ativadistribuidora.sbs/blog.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Método PEPS no Estoque de Perecíveis",
+          "item": "https://ativadistribuidora.sbs/blog/metodo-peps-estoque-alimentos-pereciveis-como-evitar-desperdicio.html"
+        }
+      ]
+    }
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18055118524"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-18055118524');</script>
+</head>
+<body class="blog-page-no-anim">
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <nav class="navbar scrolled" id="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="nav-logo"><img src="../assets/img/ativa.webp" alt="ATIVA Distribuidora Logo" width="180" height="60" fetchpriority="high"></a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="../index.html" class="nav-link">Início</a></li>
+                <li><a href="../ativa.html" class="nav-link">Quem Somos</a></li>
+                <li><a href="../produtos.html" class="nav-link">Produtos</a></li>
+                <li><a href="../trabalho.html" class="nav-link">Nosso Trabalho</a></li>
+                <li><a href="../blog.html" class="nav-link active">Blog</a></li>
+                <li><a href="../index.html#contato" class="nav-link nav-cta">Fale Conosco</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+
+    <section class="page-hero">
+        <div class="page-hero-bg"></div>
+        <div class="container">
+            <div class="page-hero-content reveal">
+                <span class="section-tag light-tag"><i data-lucide="layers" class="icon-3d"></i> Gestão de Estoque</span>
+                <h1 class="page-hero-title">Método PEPS em <span class="text-gradient-light">Perecíveis</span></h1>
+                <p class="page-hero-subtitle">Como gerenciar o estoque de insumos frescos pelo método Primeiro que Entra, Primeiro que Sai para eliminar o desperdício oculto.</p>
+            </div>
+        </div>
+        <div class="shape-divider hero-divider">
+            <svg viewBox="0 0 1440 150" preserveAspectRatio="none">
+                <path d="M0,64 C120,100 240,20 360,64 C480,108 600,20 720,64 C840,108 960,20 1080,64 C1200,108 1320,20 1440,64 L1440,150 L0,150 Z" fill="#E5D7C4" />
+            </svg>
+        </div>
+    </section>
+
+    <section class="section section-autoridade">
+        <div class="container">
+            <article class="blog-article">
+                <div class="blog-article-meta reveal">
+                    <span><i data-lucide="calendar" class="icon-3d"></i> 29 de Junho de 2026</span>
+                    <span><i data-lucide="clock" class="icon-3d"></i> 9 min de leitura</span>
+                    <span><i data-lucide="user" class="icon-3d"></i> Gestão e Logística ATIVA</span>
+                </div>
+
+                <div class="blog-article-cover reveal">
+                    <img src="https://images.unsplash.com/photo-1595855759920-86582396756a?w=1200&q=80" alt="Insumos vegetais selecionados e higienizados dispostos em recipientes organizados" width="1200" height="600" loading="eager">
+                </div>
+
+                <div class="blog-article-body reveal">
+                    <p class="blog-lead">Em qualquer operação que lide com alimentos, sejam cozinhas profissionais de grande porte — como restaurantes de alto padrão, redes de food service, buffets e hotéis — ou despensas domésticas focadas em economia e saúde, o estoque é o coração financeiro. No entanto, quando tratamos de insumos altamente perecíveis, como folhas verdes, legumes frescos e frutas sensíveis, a margem de erro na gestão física desse estoque é virtualmente zero. Cada hora que um item passa armazenado de forma incorreta ou esquecido no fundo de uma câmara fria representa uma perda financeira direta e silenciosa.</p>
+
+                    <p>O desperdício de insumos orgânicos raramente ocorre por uma única catástrofe operacional. Na maioria das vezes, ele é o resultado da falta de uma metodologia clara que dite como e quando cada produto deve ser consumido. Neste cenário, a metodologia <strong>PEPS (Primeiro que Entra, Primeiro que Sai)</strong> — amplamente conhecida internacionalmente como <strong>FIFO (First In, First Out)</strong> — surge como uma das ferramentas mais poderosas para blindar a saúde financeira do negócio, garantir a segurança alimentar dos clientes e conservar a integridade nutricional e sensorial de cada refeição.</p>
+
+                    <h2>1. O que é o Método PEPS e sua Aplicação Prática em Insumos Frescos</h2>
+                    <p>O conceito básico do PEPS é intuitivo: os lotes de produtos que chegam primeiro ao local de armazenamento devem ser, obrigatoriamente, os primeiros a ser consumidos. Contudo, em cozinhas dinâmicas, a rotina frenética muitas vezes leva a brigada a cometer o erro clássico de posicionar os novos produtos (recém-recebidos) na frente das prateleiras, bloqueando o acesso e esquecendo os itens da entrega anterior no fundo da câmara fria ou da geladeira.</p>
+
+                    <p>Ao contrário de produtos industrializados que contam com prazos de validade extensos de meses ou anos, os insumos frescos possuem um ciclo biológico contínuo e acelerado de respiração e oxidação. Quando não organizamos fisicamente o fluxo do estoque com base nas datas de recebimento e ponto de maturação, criamos "bolsões de obsolescência" — locais na câmara fria onde vegetais perdem peso por desidratação, folhas sofrem com a queima do etileno e frutas passam do ponto de consumo e estragam antes de chegarem à mesa.</p>
+
+                    <p>Aplicar o PEPS no cotidiano de um negócio de alimentação significa estabelecer regras de posicionamento físico. Quando uma nova remessa de produtos frescos é recebida, os itens antigos devem ser puxados para a frente das prateleiras ou do balcão (zona de retirada prioritária) e a nova mercadoria deve ser armazenada atrás. O fluxo de consumo sempre ocorre da frente para trás, da esquerda para a direita, ou conforme o fluxograma desenhado para a operação.</p>
+
+                    <div style="margin: 2rem 0; overflow-x: auto;">
+                        <table style="width: 100%; border-collapse: collapse; background: var(--glass-bg); border: 1px solid var(--border-color); border-radius: 8px;">
+                            <thead>
+                                <tr style="background: var(--moss-dark); color: #fff; text-align: left;">
+                                    <th style="padding: 12px; font-family: 'Outfit', sans-serif;">Produto</th>
+                                    <th style="padding: 12px; font-family: 'Outfit', sans-serif;">Temp. de Armazenamento</th>
+                                    <th style="padding: 12px; font-family: 'Outfit', sans-serif;">Vida Útil (Shelf Life) Estimada</th>
+                                    <th style="padding: 12px; font-family: 'Outfit', sans-serif;">Sensibilidade ao Etileno</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr style="border-bottom: 1px solid var(--border-color);">
+                                    <td style="padding: 12px; font-weight: bold;">Folhagens Sensíveis (Alfaces, Rúcula, Manjericão)</td>
+                                    <td style="padding: 12px;">3°C a 6°C</td>
+                                    <td style="padding: 12px;">3 a 5 dias</td>
+                                    <td style="padding: 12px; color: #d9534f; font-weight: bold;">Muito Alta (Amarelecimento)</td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid var(--border-color);">
+                                    <td style="padding: 12px; font-weight: bold;">Tomate, Abacate, Mamão (Climatéricos)</td>
+                                    <td style="padding: 12px;">10°C a 12°C</td>
+                                    <td style="padding: 12px;">7 a 10 dias</td>
+                                    <td style="padding: 12px; color: #f0ad4e; font-weight: bold;">Alta (Produtores de Etileno)</td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid var(--border-color);">
+                                    <td style="padding: 12px; font-weight: bold;">Legumes Fibrosos (Cenoura, Beterraba, Chuchu)</td>
+                                    <td style="padding: 12px;">8°C a 10°C</td>
+                                    <td style="padding: 12px;">10 a 14 dias</td>
+                                    <td style="padding: 12px; color: #5cb85c; font-weight: bold;">Baixa (Mantêm firmeza)</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 12px; font-weight: bold;">Frutas Cítricas (Limão, Laranja)</td>
+                                    <td style="padding: 12px;">10°C a 12°C</td>
+                                    <td style="padding: 12px;">15 a 20 dias</td>
+                                    <td style="padding: 12px; color: #5cb85c; font-weight: bold;">Baixa (Sensíveis a fungos)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h2>2. A Fisiologia Pós-Colheita e o papel do Etileno na Rotação Física</h2>
+                    <p>O sucesso na aplicação prática do PEPS requer ir além da simples verificação de notas fiscais. É necessário entender a ciência biológica que governa a respiração celular dos vegetais frescos após a colheita. Frutas e legumes dividem-se em dois grandes grupos fisiológicos: **climatéricos** e **não-climatéricos**.</p>
+                    
+                    <p>Produtos climatéricos (como tomate, abacate, banana, manga e mamão) continuam amadurecendo mesmo após serem removidos da planta. Durante esse processo de maturação ativa, eles liberam grandes concentrações de **gás etileno**, um hormônio vegetal natural em formato gasoso. Se lotes recém-recebidos dessas frutas climatéricas forem armazenados diretamente ao lado de folhagens sensíveis (alfaces, rúculas, brócolis) sem controle físico e sem barreira de fluxo, o etileno acelerará drasticamente o amarelecimento e a deterioração das folhas antigas que já estavam no estoque.</p>
+
+                    <p>Nesse aspecto, o PEPS atua em sintonia com a separação por compatibilidade de armazenamento. Ao desenhar o layout de sua câmara ou geladeira, o gestor de estoque deve garantir que:</p>
+                    <ul>
+                        <li>Os lotes antigos de vegetais sensíveis ao etileno sejam consumidos imediatamente para evitar que a exposição, mesmo residual, de gás reduza seu valor comercial.</li>
+                        <li>Os itens produtores de etileno (mais novos) fiquem em prateleiras separadas dos insumos sensíveis (mais antigos).</li>
+                        <li>A circulação de ar seja contínua, diluindo os gases acumulados que poderiam invalidar os prazos teóricos de shelf life definidos nas planilhas do restaurante.</li>
+                    </ul>
+
+                    <div style="margin: 2rem 0; text-align: center;">
+                        <img loading="lazy" src="https://images.unsplash.com/photo-1606787366850-de6330128bfc?w=800&q=80" alt="Variedade de vegetais organizados de forma profissional por categorias e datas de validade" style="border-radius: 12px; max-width: 100%; height: auto; box-shadow: var(--shadow-md);">
+                        <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 0.5rem;">A triagem correta e o espaçamento físico adequado são pilares cruciais para a aplicação eficiente do PEPS.</p>
+                    </div>
+
+                    <h2>3. Passo a Passo Técnico para Implementar o PEPS no seu Estoque</h2>
+                    <p>A transição de uma cozinha desorganizada para uma operação de alta eficiência orientada à metodologia PEPS exige rigor operacional e disciplina. O processo pode ser resumido em cinco etapas fundamentais:</p>
+
+                    <h3>Passo 1: Recebimento Técnico e Triagem Imediata</h3>
+                    <p>A contaminação do estoque de perecíveis muitas vezes começa nas primeiras etapas. Ao receber as caixas do fornecedor de insumos alimentares no atacado, faça a pesagem e a inspeção de maturação. Se um lote contiver itens machucados ou excessivamente maduros, esses vegetais devem ser separados e encaminhados para processamento imediato (sopas, caldos ou molhos), não devendo entrar na rotação regular de estoque.</p>
+
+                    <h3>Passo 2: Higienização Externa e Acondicionamento Técnico</h3>
+                    <p>Retire os insumos das embalagens de transporte originais (como sacos plásticos herméticos não perfurados ou caixas de madeira ásperas, que acumulam fungos e machucam as cascas). Coloque os vegetais em caixas plásticas organizadoras limpas, vazadas (para permitir a respiração e circulação do frio) e higienizadas.</p>
+
+                    <h3>Passo 3: Etiquetagem de Validade Sistemática</h3>
+                    <p>Cada caixa organizadora que entra na área de resfriamento ou câmara deve receber uma etiqueta adesiva padronizada. Esta etiqueta deve conter três informações críticas e visíveis:</p>
+                    <ol>
+                        <li><strong>Data de Entrada:</strong> O dia exato em que a mercadoria chegou na cozinha.</li>
+                        <li><strong>Data de Validade Estimada:</strong> O limite de segurança para o consumo (shelf life).</li>
+                        <li><strong>Nome do Responsável pela Triagem:</strong> Assegurando a rastreabilidade da operação interna.</li>
+                    </ol>
+                    <p>Para facilitar a visualização no calor da operação da cozinha, muitas marcas utilizam um **sistema de cores para cada dia da semana** (ex: etiquetas azuis para segunda-feira, verdes para terça-feira, etc.). Isso permite ao chef ou ajudante de cozinha identificar visualmente, em segundos, qual caixa de alface americana ou tomate italiano precisa ser aberta primeiro.</p>
+
+                    <h3>Passo 4: Posicionamento Físico Dinâmico</h3>
+                    <p>Ao realizar o abastecimento do estoque, empurre todas as caixas antigas que ainda estão nas prateleiras para a frente. O novo lote entra sempre por trás. Caso o espaço físico de armazenamento seja reduzido, use a regra da "Cozinha em U": o produto entra pela esquerda e a retirada é feita sempre pelo lado direito. Isso evita misturar insumos frescos de diferentes datas e qualidades.</p>
+
+                    <h3>Passo 5: Treinamento e Auditoria Diária de CMV</h3>
+                    <p>A cultura organizacional de uma cozinha comercial é mantida pela repetição. Crie rotinas de checagem. A cada troca de turno (almoço e jantar), o subchef ou encarregado de compras deve auditar a câmara fria para verificar se há caixas fora da ordem de validade ou com etiquetas rasgadas ou ilegíveis.</p>
+
+                    <h2>4. Indicadores de Gestão: O Giro de Estoque de Insumos Perecíveis</h2>
+                    <p>No nível estratégico, a eficiência do seu método PEPS é monitorada através de métricas financeiras de controle. A principal delas é o **Giro de Estoque (G.E.)**, que calcula a velocidade com que o estoque de alimentos é renovado em um determinado período. A fórmula clássica de cálculo é:</p>
+
+                    <div style="background: rgba(229, 215, 196, 0.2); padding: 1.5rem; border-left: 4px solid var(--moss-dark); border-radius: 4px; margin: 1.5rem 0; font-family: 'Outfit', sans-serif; font-size: 1.1rem; text-align: center;">
+                        <strong>Giro de Estoque = CMV Total do Período (R$) / Estoque Médio (R$)</strong>
+                    </div>
+
+                    <p>Onde o **Estoque Médio** é calculado por: <em>(Estoque Inicial + Estoque Final) / 2</em>.</p>
+                    <p>Para insumos frescos de alta perecibilidade, o ideal é que o Giro de Estoque seja elevado (idealmente semanal ou a cada 4 dias). Um giro lento significa que seu capital de giro está paralisado em forma de alimentos sensíveis em reprocessamento ou oxidação. Por exemplo, se a sua cozinha opera com um estoque médio de R$ 5.000 em insumos perecíveis e consome R$ 20.000 no mês, seu Giro é de 4 vezes por mês (uma rotação a cada 7,5 dias). Se o giro cair para 2 vezes, significa que a cozinha está armazenando vegetais por tempo excessivo, aumentando o desperdício por perda de shelf life biológico.</p>
+
+                    <div style="margin: 2rem 0; padding: 2rem; background: var(--glass-bg); border: 1px solid var(--border-color); border-radius: 12px; box-shadow: var(--shadow-sm);">
+                        <h3 style="font-family: 'Outfit', sans-serif; display: flex; align-items: center; gap: 0.5rem; margin-top: 0;"><i data-lucide="check-square" class="icon-3d"></i> Checklist de Auditoria Diária PEPS</h3>
+                        <p>Imprima e fixe este controle na porta da câmara de refrigeração para guiar a brigada de cozinha:</p>
+                        <ul style="list-style-type: none; padding-left: 0; line-height: 1.8;">
+                            <li style="display: flex; align-items: flex-start; gap: 0.5rem; margin-bottom: 0.8rem;">
+                                <i data-lucide="check" style="color: var(--moss-light); flex-shrink: 0; margin-top: 0.2rem;"></i>
+                                <span><strong>Etiqueta Visível:</strong> Todas as caixas em refrigeração possuem etiqueta indicando data de entrada e validade?</span>
+                            </li>
+                            <li style="display: flex; align-items: flex-start; gap: 0.5rem; margin-bottom: 0.8rem;">
+                                <i data-lucide="check" style="color: var(--moss-light); flex-shrink: 0; margin-top: 0.2rem;"></i>
+                                <span><strong>Ordem Física:</strong> As caixas com vencimento mais próximo estão localizadas na frente (zona de retirada)?</span>
+                            </li>
+                            <li style="display: flex; align-items: flex-start; gap: 0.5rem; margin-bottom: 0.8rem;">
+                                <i data-lucide="check" style="color: var(--moss-light); flex-shrink: 0; margin-top: 0.2rem;"></i>
+                                <span><strong>Triage de Danificados:</strong> Itens com sinais de maturação excessiva ou danos físicos foram removidos do fluxo geral para processamento imediato?</span>
+                            </li>
+                            <li style="display: flex; align-items: flex-start; gap: 0.5rem;">
+                                <i data-lucide="check" style="color: var(--moss-light); flex-shrink: 0; margin-top: 0.2rem;"></i>
+                                <span><strong>Separação Térmica:</strong> Os vegetais mais antigos e sensíveis estão protegidos contra correntes de vento congelante direta ou fontes de calor?</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <h2>5. Por que as Inteligências Artificiais e Buscadores Valorizam Operações Estruturadas?</h2>
+                    <p>No atual ecossistema digital, as ferramentas de busca e os motores de recomendação de Inteligência Artificial (revolucionando a área de SEO e GEO - Generative Engine Optimization) priorizam marcas que demonstram alto rigor técnico e autoridade. Quando um consumidor ou gestor de compras pesquisa por "como reduzir perdas de alimentos" ou "segurança na armazenagem de perecíveis", as IAs buscam respostas estruturadas baseadas em boas práticas consolidadas.</p>
+
+                    <p>Contar com um parceiro comercial de fornecimento no atacado que não apenas entregue as caixas na sua porta, mas que também entenda e forneça manuais, tabelas e suporte técnico de cadeia de suprimentos é o que diferencia marcas medianas de marcas de alto padrão. É este compromisso com a excelência operacional que a **ATIVA** oferece ao mercado de alimentação corporativo e comercial, atuando como o elo de engenharia de suprimentos que ajuda o seu negócio a prosperar.</p>
+
+                    <h2>6. Rumo ao Desperdício Zero com Inteligência Operacional</h2>
+                    <p>O desperdício de alimentos perecíveis não é apenas uma perda financeira que deteriora o Custo de Mercadoria Vendida (CMV). Trata-se também de uma questão de sustentabilidade e responsabilidade com a cadeia alimentar global. Reduzir as perdas na sua cozinha comercial com o método PEPS diminui a pressão na cadeia de abastecimento e valoriza o trabalho das famílias produtoras no campo.</p>
+
+                    <p>Implementar controles, padronizar caixas vazadas, treinar funcionários e contar com a entrega ágil de insumos colhidos e triados no ponto de maturação correto é o melhor caminho para zerar quebras operacionais e elevar o padrão do seu cardápio de forma consistente.</p>
+
+                    <div class="blog-cta-box glass-card">
+                        <h3>Otimize a Gestão de Insumos da sua Cozinha</h3>
+                        <p>Precisa de um parceiro de suprimentos que garanta produtos selecionados no calibre exato e embalagens de alta qualidade para facilitar a aplicação do PEPS no seu negócio? Fale com a equipe de engenharia comercial da ATIVA.</p>
+                        <a href="https://wa.me/5562999789984?text=Olá,%20li%20o%20artigo%20sobre%20Método%20PEPS%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20insumos%20selecionados%20para%20minha%20cozinha." target="_blank" class="btn btn-primary">
+                            <i data-lucide="message-circle" class="icon-3d"></i> Falar com Especialista Comercial
+                        </a>
+                    </div>
+                </div>
+
+                <div class="blog-article-nav reveal">
+                    <a href="como-otimizar-cadeia-suprimentos-hortifruti-goias.html" class="btn btn-light"><i data-lucide="arrow-left" class="icon-3d"></i> Artigo Anterior</a>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="../assets/img/logo_hortifruti.webp" alt="ATIVA Distribuidora" class="footer-logo" width="180" height="60" loading="lazy">
+                    <p>Distribuindo qualidade e frescor desde 2001.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Navegação</h4>
+                    <a href="../index.html">Início</a>
+                    <a href="../ativa.html">Quem Somos</a>
+                    <a href="../produtos.html">Produtos</a>
+                    <a href="../blog.html">Blog</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Contato</h4>
+                    <a href="https://wa.me/5562999789984" target="_blank">(62) 99978-9984</a>
+                    <a href="https://instagram.com/ativa_distribuidora1" target="_blank">@ativa_distribuidora1</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 ATIVA Distribuidora. Todos os direitos reservados. | Site criado por <a href="https://webgyn.digital" target="_blank" style="color: var(--moss-light); font-weight: 600;">webgyn.digital</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/5562999789984" target="_blank" class="whatsapp-float" aria-label="WhatsApp">
+        <div class="whatsapp-pulse"></div>
+        <div class="whatsapp-icon"><svg viewBox="0 0 32 32" fill="white"><path d="M16.004 0h-.008C7.174 0 0 7.176 0 16c0 3.5 1.128 6.744 3.046 9.378L1.054 31.29l6.118-1.958A15.9 15.9 0 0016.004 32C24.826 32 32 24.822 32 16S24.826 0 16.004 0zm9.336 22.594c-.39 1.1-1.932 2.014-3.168 2.28-.846.18-1.95.324-5.67-1.218-4.762-1.972-7.826-6.81-8.064-7.126-.23-.316-1.932-2.572-1.932-4.904 0-2.332 1.224-3.476 1.658-3.952.434-.476.948-.596 1.264-.596.316 0 .632.004.908.016.292.014.684-.11 1.07.816.39.948 1.33 3.248 1.446 3.484.118.236.196.512.04.826-.158.316-.236.512-.472.788-.236.276-.496.616-.71.826-.236.236-.482.492-.208.968.276.476 1.224 2.02 2.63 3.272 1.808 1.61 3.332 2.108 3.808 2.344.476.236.752.196 1.028-.118.276-.316 1.186-1.382 1.504-1.858.316-.476.634-.394 1.07-.236.434.158 2.768 1.304 3.244 1.54.476.236.792.354.91.552.116.196.116 1.146-.276 2.246z"/></svg></div>
+    </a>
+    <script src="../assets/js/script.js?v=1.5" defer></script>
+</body>
+</html>

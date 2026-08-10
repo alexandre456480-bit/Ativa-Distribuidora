@@ -1,0 +1,15 @@
+# Force LF line endings for web files
+* text=auto eol=lf
+
+# Ensure XML and TXT files always use LF
+*.xml text eol=lf
+*.txt text eol=lf
+*.json text eol=lf
+*.html text eol=lf
+*.css text eol=lf
+*.js text eol=lf
+
+# Binary files
+*.webp binary
+*.jpg binary
+*.png binary

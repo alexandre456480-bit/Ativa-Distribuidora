@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Cotação Rápida WhatsApp | ATIVA Distribuidora</title>
+    <meta name="description" content="Solicite sua cotação rápida de hortifruti atacado na ATIVA Distribuidora. Atendemos restaurantes, bares, hotéis e comércios em Goiânia.">
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="canonical" href="https://ativadistribuidora.sbs/orcamento.html">
+    <link rel="icon" type="image/webp" href="assets/img/logo_hortifruti.webp">
+
+
+    <!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1653426835719560');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1653426835719560&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@0.344.0" defer></script>
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-K62D3VCM');</script>
+    <!-- End Google Tag Manager -->
+
+    <style>
+        /* Design System ATIVA */
+        :root {
+            --cafe-noir: #4C3D19;
+            --kombu: #354024;
+            --kombu-dark: #242c18;
+            --moss: #889063;
+            --moss-light: #a0a87a;
+            --tan: #CFBB99;
+            --bone: #E5D7C4;
+            --bone-light: #F4EFE6;
+            --white: #FAFAF7;
+            --black: #1a1a14;
+            --wsp-green: #25D366;
+            --wsp-hover: #20bd5a;
+            --shadow-card: 0 20px 40px rgba(53, 64, 36, 0.12), 0 8px 16px rgba(76, 61, 25, 0.08);
+            --transition: 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            min-height: 100vh;
+            font-family: 'Inter', sans-serif;
+            background: var(--bone);
+            color: var(--cafe-noir);
+            line-height: 1.5;
+        }
+
+        body {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 24px 16px;
+            background: linear-gradient(135deg, #E5D7C4 0%, #d8c7b0 50%, #cbb79d 100%);
+            overflow-x: hidden;
+        }
+
+        /* Elementos decorativos no fundo */
+        .bg-decorations {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 0;
+            overflow: hidden;
+        }
+
+        .bg-circle {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.25;
+        }
+
+        .bg-circle-1 {
+            top: -100px;
+            left: -100px;
+            width: 400px;
+            height: 400px;
+            background: var(--kombu);
+        }
+
+        .bg-circle-2 {
+            bottom: -150px;
+            right: -100px;
+            width: 500px;
+            height: 500px;
+            background: var(--moss);
+        }
+
+        /* Botão Voltar Superior Esquerdo */
+        .back-bar {
+            position: fixed;
+            top: 20px;
+            left: 24px;
+            z-index: 10;
+        }
+
+        .btn-back {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 18px;
+            background: rgba(250, 250, 247, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(207, 187, 153, 0.4);
+            border-radius: 50px;
+            color: var(--kombu);
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+            transition: var(--transition);
+        }
+
+        .btn-back:hover {
+            background: var(--kombu);
+            color: var(--white);
+            transform: translateX(-4px);
+            box-shadow: 0 6px 20px rgba(53, 64, 36, 0.2);
+        }
+
+        .btn-back i {
+            width: 18px;
+            height: 18px;
+            transition: transform 0.3s ease;
+        }
+
+        .btn-back:hover i {
+            transform: translateX(-3px);
+        }
+
+        /* Wrapper da Página */
+        .page-wrapper {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            max-width: 520px;
+            margin: 40px auto 20px;
+        }
+
+        /* Header com Logo Centralizada */
+        .header-section {
+            text-align: center;
+            margin-bottom: 24px;
+        }
+
+        .logo-container {
+            display: inline-block;
+            margin-bottom: 12px;
+            transition: transform 0.3s ease;
+        }
+
+        .logo-container:hover {
+            transform: scale(1.03);
+        }
+
+        .logo-img {
+            height: 130px;
+            width: auto;
+            object-fit: contain;
+            filter: drop-shadow(0 6px 16px rgba(53, 64, 36, 0.2));
+        }
+
+        .header-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.75rem;
+            font-weight: 800;
+            color: var(--kombu);
+            line-height: 1.2;
+            margin-bottom: 8px;
+        }
+
+        .header-subtitle {
+            font-size: 0.95rem;
+            color: var(--cafe-noir);
+            opacity: 0.85;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        /* Card do Formulário */
+        .form-card {
+            background: rgba(250, 250, 247, 0.92);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            border-radius: 24px;
+            padding: 32px 28px;
+            box-shadow: var(--shadow-card);
+        }
+
+        /* Selos de Benefícios do Atacado */
+        .badges-bar {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background: rgba(136, 144, 99, 0.12);
+            border: 1px dashed rgba(136, 144, 99, 0.3);
+            border-radius: 12px;
+            padding: 10px 12px;
+            margin-bottom: 24px;
+        }
+
+        .badge-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.78rem;
+            font-weight: 600;
+            color: var(--kombu);
+        }
+
+        .badge-item i {
+            width: 15px;
+            height: 15px;
+            color: var(--moss);
+        }
+
+        /* Banner Alerta CNPJ */
+        .cnpj-alert-banner {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background: rgba(184, 51, 42, 0.08);
+            border: 1px solid rgba(184, 51, 42, 0.25);
+            border-radius: 10px;
+            padding: 9px 14px;
+            margin-bottom: 20px;
+            color: #90221b;
+            font-size: 0.84rem;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        .cnpj-alert-banner i {
+            width: 18px;
+            height: 18px;
+            color: #b8332a;
+            flex-shrink: 0;
+        }
+
+        /* Grupos de Input */
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-label {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.88rem;
+            font-weight: 700;
+            color: var(--kombu);
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .form-label i {
+            width: 16px;
+            height: 16px;
+            color: var(--moss);
+        }
+
+        .input-wrapper {
+            position: relative;
+        }
+
+        .form-control, .form-select {
+            width: 100%;
+            padding: 14px 16px;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.95rem;
+            color: var(--black);
+            background: var(--white);
+            border: 2px solid rgba(207, 187, 153, 0.5);
+            border-radius: 12px;
+            outline: none;
+            transition: var(--transition);
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.02);
+        }
+
+        .form-control:focus, .form-select:focus {
+            border-color: var(--kombu);
+            box-shadow: 0 0 0 4px rgba(53, 64, 36, 0.12);
+            background: #ffffff;
+        }
+
+        .form-control::placeholder {
+            color: #a09888;
+        }
+
+        .form-select {
+            appearance: none;
+            -webkit-appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%3C354024' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 14px center;
+            background-size: 18px;
+            cursor: pointer;
+        }
+
+        /* Preview da Mensagem */
+        .preview-box {
+            background: #eef5ec;
+            border-left: 4px solid var(--wsp-green);
+            border-radius: 8px;
+            padding: 12px 14px;
+            margin-bottom: 24px;
+            font-size: 0.83rem;
+            color: #2c4228;
+        }
+
+        .preview-title {
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            margin-bottom: 4px;
+            color: #1e6933;
+        }
+
+        .preview-title i {
+            width: 14px;
+            height: 14px;
+        }
+
+        .preview-text {
+            font-style: italic;
+            line-height: 1.4;
+            color: #334e30;
+            word-break: break-word;
+        }
+
+        /* Botão CTA WhatsApp */
+        .btn-whatsapp {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 16px 24px;
+            background: linear-gradient(135deg, #25D366 0%, #1da851 100%);
+            color: #ffffff;
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.05rem;
+            font-weight: 700;
+            border: none;
+            border-radius: 14px;
+            cursor: pointer;
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.35);
+            transition: var(--transition);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .btn-whatsapp:hover {
+            background: linear-gradient(135deg, #20bd5a 0%, #189345 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 14px 30px rgba(37, 211, 102, 0.45);
+        }
+
+        .btn-whatsapp:active {
+            transform: translateY(1px);
+        }
+
+        .btn-whatsapp i {
+            width: 22px;
+            height: 22px;
+        }
+
+        /* Footer Seguro */
+        .form-footer-note {
+            margin-top: 16px;
+            text-align: center;
+            font-size: 0.78rem;
+            color: #7a6e5b;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+
+        .form-footer-note i {
+            width: 14px;
+            height: 14px;
+            color: var(--moss);
+        }
+
+        /* Responsividade */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px 12px;
+            }
+            .back-bar {
+                top: 14px;
+                left: 14px;
+            }
+            .btn-back {
+                padding: 8px 14px;
+                font-size: 0.82rem;
+            }
+            .page-wrapper {
+                margin-top: 54px;
+            }
+            .logo-img {
+                height: 100px;
+            }
+            .header-title {
+                font-size: 1.45rem;
+            }
+            .form-card {
+                padding: 24px 18px;
+                border-radius: 20px;
+            }
+            .badges-bar {
+                flex-direction: column;
+                gap: 8px;
+                align-items: flex-start;
+                padding: 10px 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K62D3VCM"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- Fundo decorativo sutil -->
+    <div class="bg-decorations">
+        <div class="bg-circle bg-circle-1"></div>
+        <div class="bg-circle bg-circle-2"></div>
+    </div>
+
+    <!-- Botão Voltar (Superior Esquerdo) -->
+    <div class="back-bar">
+        <a href="index.html" class="btn-back" title="Voltar ao site principal">
+            <i data-lucide="arrow-left"></i>
+            <span>Voltar ao site</span>
+        </a>
+    </div>
+
+    <!-- Container Principal -->
+    <div class="page-wrapper">
+        
+        <!-- Header com Logo da ATIVA Centralizada -->
+        <header class="header-section">
+            <a href="index.html" class="logo-container" title="ATIVA Distribuidora de Hortifruti">
+                <img src="assets/img/ativa.webp" alt="ATIVA Distribuidora Logo" class="logo-img">
+            </a>
+            <h1 class="header-title">Faça o seu pedido ou peça mais detalhes</h1>
+            <p class="header-subtitle">Preencha os dados da sua empresa para falar com a nossa equipe.</p>
+        </header>
+
+        <!-- Card do Formulário Personalizado -->
+        <main class="form-card">
+
+            <!-- Selos de Credibilidade -->
+            <div class="badges-bar">
+                <div class="badge-item">
+                    <i data-lucide="check-circle-2"></i>
+                    <span>Direto do CEASA</span>
+                </div>
+                <div class="badge-item">
+                    <i data-lucide="truck"></i>
+                    <span>Entrega Diária em Goiânia</span>
+                </div>
+                <div class="badge-item">
+                    <i data-lucide="shield-check"></i>
+                    <span>Exclusivo CNPJ</span>
+                </div>
+            </div>
+
+            <!-- Alerta CNPJ / Pessoa Física -->
+            <div class="cnpj-alert-banner">
+                <i data-lucide="alert-triangle"></i>
+                <span>Atenção: Não vendemos para pessoa física! Atendimento exclusivo B2B/CNPJ.</span>
+            </div>
+
+            <form id="quoteForm" onsubmit="sendToWhatsApp(event)">
+                
+                <!-- Nome da Empresa -->
+                <div class="form-group">
+                    <label for="companyName" class="form-label">
+                        <i data-lucide="building-2"></i>
+                        Nome da Empresa / Comercial
+                    </label>
+                    <div class="input-wrapper">
+                        <input type="text" id="companyName" class="form-control" placeholder="Ex: Restaurante Sabor & Arte" required autocomplete="organization">
+                    </div>
+                </div>
+
+                <!-- Segmento da Empresa -->
+                <div class="form-group">
+                    <label for="companySegment" class="form-label">
+                        <i data-lucide="store"></i>
+                        Segmento do Negócio
+                    </label>
+                    <div class="input-wrapper">
+                        <select id="companySegment" class="form-select" required onchange="handleSegmentChange()">
+                            <option value="" disabled selected>Selecione seu segmento...</option>
+                            <option value="Restaurante">Restaurante</option>
+                            <option value="Bar / Lanchonete">Bar / Lanchonete</option>
+                            <option value="Hamburgueria / Pizzaria">Hamburgueria / Pizzaria</option>
+                            <option value="Hotel / Pousada">Hotel / Pousada</option>
+                            <option value="Supermercado / Sacolão">Supermercado / Sacolão</option>
+                            <option value="Buffet / Eventos">Buffet / Eventos</option>
+                            <option value="Cozinha Industrial / Hospitalar">Cozinha Industrial / Hospitalar</option>
+                            <option value="Outro Segmento">Outro Segmento</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Campo de Segmento Personalizado se selecionar Outro -->
+                <div class="form-group" id="customSegmentGroup" style="display: none;">
+                    <label for="customSegment" class="form-label">
+                        <i data-lucide="tag"></i>
+                        Especifique o Segmento
+                    </label>
+                    <div class="input-wrapper">
+                        <input type="text" id="customSegment" class="form-control" placeholder="Ex: Pastelaria, Hotelaria, etc.">
+                    </div>
+                </div>
+
+                <!-- Preview Dinâmico da Mensagem -->
+                <div class="preview-box">
+                    <div class="preview-title">
+                        <i data-lucide="message-square-text"></i>
+                        Preview da mensagem que será enviada:
+                    </div>
+                    <div class="preview-text" id="messagePreview">
+                        "Olá, falo em nome da (Nome da Empresa), somos um(a) (Segmento) e gostaria de saber mais."
+                    </div>
+                </div>
+
+                <!-- Botão CTA WhatsApp -->
+                <button type="submit" class="btn-whatsapp">
+                    <i data-lucide="message-circle"></i>
+                    <span>Enviar Mensagem via WhatsApp</span>
+                </button>
+
+                <div class="form-footer-note">
+                    <i data-lucide="lock"></i>
+                    <span>Atendimento rápido e direto com nossos consultores de vendas.</span>
+                </div>
+            </form>
+        </main>
+    </div>
+
+    <!-- Script de Lógica e Integração -->
+    <script>
+        const phone = "5562999789984"; // Número do WhatsApp oficial da ATIVA
+
+        const nameInput = document.getElementById('companyName');
+        const segmentSelect = document.getElementById('companySegment');
+        const customSegmentInput = document.getElementById('customSegment');
+        const customSegmentGroup = document.getElementById('customSegmentGroup');
+        const previewEl = document.getElementById('messagePreview');
+
+        function handleSegmentChange() {
+            if (segmentSelect.value === "Outro Segmento") {
+                customSegmentGroup.style.display = "block";
+                customSegmentInput.setAttribute("required", "true");
+            } else {
+                customSegmentGroup.style.display = "none";
+                customSegmentInput.removeAttribute("required");
+            }
+            updatePreview();
+        }
+
+        function getSegmentValue() {
+            if (segmentSelect.value === "Outro Segmento") {
+                return customSegmentInput.value.trim() || "(Segmento)";
+            }
+            return segmentSelect.value || "(Segmento)";
+        }
+
+        function updatePreview() {
+            const companyName = nameInput.value.trim() || "(Nome da Empresa)";
+            const segment = getSegmentValue();
+
+            previewEl.textContent = `"Olá, falo em nome do(a) ${companyName}, somos um(a) ${segment} e gostaria de saber mais."`;
+        }
+
+        nameInput.addEventListener('input', updatePreview);
+        segmentSelect.addEventListener('change', updatePreview);
+        customSegmentInput.addEventListener('input', updatePreview);
+
+        function sendToWhatsApp(e) {
+            e.preventDefault();
+
+            const companyName = nameInput.value.trim();
+            const segment = getSegmentValue();
+
+            if (!companyName) {
+                alert("Por favor, informe o nome da sua empresa.");
+                nameInput.focus();
+                return;
+            }
+
+            const message = `Olá, falo em nome do(a) ${companyName}, somos um(a) ${segment} e gostaria de saber mais.`;
+            const encodedMessage = encodeURIComponent(message);
+            const whatsappUrl = `https://wa.me/${phone}?text=${encodedMessage}`;
+
+            // Disparo de Evento de Conversão no Google Ads / Analytics se disponível
+            if (typeof gtag === 'function') {
+                gtag('event', 'conversion', {
+                    'send_to': 'AW-18055118524',
+                    'event_category': 'WhatsApp',
+                    'event_label': 'Formulário Cotacao Rapida'
+                });
+            }
+
+            window.open(whatsappUrl, '_blank');
+        }
+
+        // Inicializar Lucide Icons
+        document.addEventListener('DOMContentLoaded', () => {
+            if (window.lucide) {
+                lucide.createIcons();
+            }
+            updatePreview();
+        });
+    </script>
+</body>
+
+</html>

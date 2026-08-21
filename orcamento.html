@@ -215,6 +215,18 @@ src="https://www.facebook.com/tr?id=1653426835719560&ev=PageView&noscript=1"
             margin: 0 auto;
         }
 
+        .header-products {
+            font-size: 0.92rem;
+            font-weight: 700;
+            color: var(--kombu);
+            margin-top: 8px;
+            background: rgba(136, 144, 99, 0.15);
+            display: inline-block;
+            padding: 6px 14px;
+            border-radius: 20px;
+            border: 1px dashed rgba(53, 64, 36, 0.2);
+        }
+
         /* Card do Formulário */
         .form-card {
             background: rgba(250, 250, 247, 0.92);
@@ -304,7 +316,7 @@ src="https://www.facebook.com/tr?id=1653426835719560&ev=PageView&noscript=1"
             position: relative;
         }
 
-        .form-control, .form-select {
+        .form-control {
             width: 100%;
             padding: 14px 16px;
             font-family: 'Inter', sans-serif;
@@ -318,7 +330,7 @@ src="https://www.facebook.com/tr?id=1653426835719560&ev=PageView&noscript=1"
             box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.02);
         }
 
-        .form-control:focus, .form-select:focus {
+        .form-control:focus {
             border-color: var(--kombu);
             box-shadow: 0 0 0 4px rgba(53, 64, 36, 0.12);
             background: #ffffff;
@@ -326,16 +338,6 @@ src="https://www.facebook.com/tr?id=1653426835719560&ev=PageView&noscript=1"
 
         .form-control::placeholder {
             color: #a09888;
-        }
-
-        .form-select {
-            appearance: none;
-            -webkit-appearance: none;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%3C354024' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
-            background-repeat: no-repeat;
-            background-position: right 14px center;
-            background-size: 18px;
-            cursor: pointer;
         }
 
         /* Preview da Mensagem */
@@ -491,6 +493,7 @@ src="https://www.facebook.com/tr?id=1653426835719560&ev=PageView&noscript=1"
             </a>
             <h1 class="header-title">Faça o seu pedido ou peça mais detalhes</h1>
             <p class="header-subtitle">Preencha os dados da sua empresa para falar com a nossa equipe.</p>
+            <p class="header-products">Trabalhamos com Frutas, Verduras, Temperos e Farináceos.</p>
         </header>
 
         <!-- Card do Formulário Personalizado -->
@@ -504,7 +507,7 @@ src="https://www.facebook.com/tr?id=1653426835719560&ev=PageView&noscript=1"
                 </div>
                 <div class="badge-item">
                     <i data-lucide="truck"></i>
-                    <span>Entrega Diária em Goiânia</span>
+                    <span>Entregas Diárias de Seg a Sexta</span>
                 </div>
                 <div class="badge-item">
                     <i data-lucide="shield-check"></i>
@@ -538,28 +541,7 @@ src="https://www.facebook.com/tr?id=1653426835719560&ev=PageView&noscript=1"
                         Segmento do Negócio
                     </label>
                     <div class="input-wrapper">
-                        <select id="companySegment" class="form-select" required onchange="handleSegmentChange()">
-                            <option value="" disabled selected>Selecione seu segmento...</option>
-                            <option value="Restaurante">Restaurante</option>
-                            <option value="Bar / Lanchonete">Bar / Lanchonete</option>
-                            <option value="Hamburgueria / Pizzaria">Hamburgueria / Pizzaria</option>
-                            <option value="Hotel / Pousada">Hotel / Pousada</option>
-                            <option value="Supermercado / Sacolão">Supermercado / Sacolão</option>
-                            <option value="Buffet / Eventos">Buffet / Eventos</option>
-                            <option value="Cozinha Industrial / Hospitalar">Cozinha Industrial / Hospitalar</option>
-                            <option value="Outro Segmento">Outro Segmento</option>
-                        </select>
-                    </div>
-                </div>
-
-                <!-- Campo de Segmento Personalizado se selecionar Outro -->
-                <div class="form-group" id="customSegmentGroup" style="display: none;">
-                    <label for="customSegment" class="form-label">
-                        <i data-lucide="tag"></i>
-                        Especifique o Segmento
-                    </label>
-                    <div class="input-wrapper">
-                        <input type="text" id="customSegment" class="form-control" placeholder="Ex: Pastelaria, Hotelaria, etc.">
+                        <input type="text" id="companySegment" class="form-control" placeholder="Ex: Restaurante, Bar, Hotel, Supermercado, Sacolão..." required>
                     </div>
                 </div>
 
@@ -593,49 +575,34 @@ src="https://www.facebook.com/tr?id=1653426835719560&ev=PageView&noscript=1"
         const phone = "5562999789984"; // Número do WhatsApp oficial da ATIVA
 
         const nameInput = document.getElementById('companyName');
-        const segmentSelect = document.getElementById('companySegment');
-        const customSegmentInput = document.getElementById('customSegment');
-        const customSegmentGroup = document.getElementById('customSegmentGroup');
+        const segmentInput = document.getElementById('companySegment');
         const previewEl = document.getElementById('messagePreview');
-
-        function handleSegmentChange() {
-            if (segmentSelect.value === "Outro Segmento") {
-                customSegmentGroup.style.display = "block";
-                customSegmentInput.setAttribute("required", "true");
-            } else {
-                customSegmentGroup.style.display = "none";
-                customSegmentInput.removeAttribute("required");
-            }
-            updatePreview();
-        }
-
-        function getSegmentValue() {
-            if (segmentSelect.value === "Outro Segmento") {
-                return customSegmentInput.value.trim() || "(Segmento)";
-            }
-            return segmentSelect.value || "(Segmento)";
-        }
 
         function updatePreview() {
             const companyName = nameInput.value.trim() || "(Nome da Empresa)";
-            const segment = getSegmentValue();
+            const segment = segmentInput.value.trim() || "(Segmento)";
 
             previewEl.textContent = `"Olá, falo em nome do(a) ${companyName}, somos um(a) ${segment} e gostaria de saber mais."`;
         }
 
         nameInput.addEventListener('input', updatePreview);
-        segmentSelect.addEventListener('change', updatePreview);
-        customSegmentInput.addEventListener('input', updatePreview);
+        segmentInput.addEventListener('input', updatePreview);
 
         function sendToWhatsApp(e) {
             e.preventDefault();
 
             const companyName = nameInput.value.trim();
-            const segment = getSegmentValue();
+            const segment = segmentInput.value.trim();
 
             if (!companyName) {
                 alert("Por favor, informe o nome da sua empresa.");
                 nameInput.focus();
+                return;
+            }
+
+            if (!segment) {
+                alert("Por favor, informe o segmento do seu negócio.");
+                segmentInput.focus();
                 return;
             }
 

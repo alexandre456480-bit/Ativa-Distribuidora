@@ -37,9 +37,10 @@ h1 em { font-weight: inherit; color: var(--sand); }
 .condition-number { color: #b9bf9e; font-size: 10px; font-weight: 600; letter-spacing: .06em; }
 .conditions p { margin: 0; color: #d5d8c8; font-size: 12px; line-height: 1.65; }
 .conditions strong { color: var(--cream); font-weight: 600; font-size: 13px; }
-.conditions .condition-business { padding: 14px 16px; background: #ffffff0d; border: 1px solid #cfbb9959; border-left: 3px solid #f39b78; border-radius: 4px; }
-.condition-business .condition-number { color: #f39b78; font-weight: 700; }
-.condition-business strong { color: #ffe1bd; font-weight: 700; }
+.conditions .condition-business { flex-direction: column; align-items: center; justify-content: center; gap: 7px; padding: 20px 22px; background: linear-gradient(145deg, #dc3838, #b41f2a); border: 1px solid #ff787894; border-radius: 12px; text-align: center; box-shadow: 7px 7px 18px #18201166, -3px -3px 12px #ff6a4b1f, inset 2px 2px 5px #ffb3a84d, inset -3px -3px 7px #750d204d, 0 0 15px #ff40402e; transform-origin: center; animation: business-card-pulse 2.4s ease-in-out infinite; }
+@keyframes business-card-pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.025); } }
+.condition-business .condition-number { color: #fff; font-weight: 700; letter-spacing: .12em; }
+.condition-business strong { color: #fff; font-size: 14px; font-weight: 700; }
 .contact-card { background: var(--cream); color: var(--ink); padding: 39px 36px 0; border-radius: 6px; box-shadow: 0 18px 60px #14200f26; border-top: 4px solid var(--red); }
 .card-eyebrow { display: block; color: #9d3b2b; margin-bottom: 14px; }
 .contact-card h2 { margin: 0; font-size: 39px; line-height: 1.15; letter-spacing: -.04em; }

@@ -27,7 +27,16 @@
         if (!form.reportValidity()) return;
 
         const message = `Olá, tenho interesse no Tomate Longa Vida.\nEmpresa: ${normalize(company.value)}\nBairro: ${normalize(neighborhood.value)}`;
-        window.location.assign(`https://wa.me/5562999789984?text=${encodeURIComponent(message)}`);
+        const destination = `https://wa.me/5562999789984?text=${encodeURIComponent(message)}`;
+        // Measure a valid WhatsApp handoff without sending form contents to Meta.
+        if (typeof window.fbq === 'function') {
+            try {
+                window.fbq('track', 'Contact');
+            } catch (error) {
+                // A tracking failure must never prevent the customer from contacting us.
+            }
+        }
+        window.setTimeout(() => window.location.assign(destination), 300);
     });
 
     updateButton();
